@@ -1,0 +1,119 @@
+@import "variables.sass"
+//TODO set font family
+.side_menu__wrap
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: fixed
+  background-color: map-get($sideMenuColors, background)
+  min-height: 100vh
+  min-width: $sideMenuWidth
+
+  >header
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 34px 0 0 0
+    color: map-get($sideMenuColors, textDefault)
+
+    img
+      display: block
+
+    >.avatar_wrap
+      margin: 43px 0 15px 0
+      max-width: 100px
+      max-height: 100px
+      border-radius: 50%
+      overflow: hidden
+
+      >.avatar_img
+        height: 100%
+        width: 100%
+        
+    .user_name
+      text-transform: capitalize
+      color: map-get($sideMenuColors, textUsernmae)
+
+  >nav
+    color: map-get($sideMenuColors, linkNotActive)
+    width: 100%
+    margin: 29px 0 0 0
+    $navLeftPadding: 28px
+    padding: 0 21px 0 $navLeftPadding
+    box-sizing: border-box
+
+    header
+      font-size: 1.5rem
+      text-transform: uppercase
+      font-size: 0.7rem
+
+      &:after
+        content: 'burger'
+        float: right
+
+    >ul
+      font-size: 1.15rem
+      margin: 18px 0 0 0
+      >*:first-letter
+        text-transform: uppercase
+
+      >li
+        $lineHeight: 45px
+        line-height: $lineHeight
+        min-height: $lineHeight
+        position: relative
+
+        &.dropdown
+          >ul
+            margin: 0 0 0 5%
+            max-height: 0
+            overflow: hidden
+            transition: all $transitionTime
+          li
+            height: 0.8*$lineHeight
+            line-height: 0.8*$lineHeight
+            a
+              font-size: 0.8em
+          &.active
+            &:before
+              opacity: 1
+            a
+              color: map-get($sideMenuColors, linkActive)
+            >ul
+              max-height: 200px
+
+          &:first-letter
+            text-transform: uppercase
+
+          &:before:first-letter
+            text-transform: lowercase
+
+        a
+          z-index: 10
+          position: relative
+          &#add_account:before
+            content: 'add '
+          &#account_list:before
+            content: "list "
+          &#fill_accounts:before
+            content: "fill "
+          &#accounts_promotion:before
+            content: "promotion "
+          &#audience_collection:before
+            content: "collect "
+          &#statistic:before
+            content: "statistics "
+
+        &:before
+          content: ''
+          position: absolute
+          left: -$navLeftPadding
+          opacity: 0
+          width: 125px
+          height: 100%
+          background: linear-gradient(to right, #113f63 0%, rgba(255,255,255, 0) 70% )
+          transition: all $transitionTime
+        &:hover
+          color: map-get($sideMenuColors, linkActive)
+          &:before
+            opacity: 1
