@@ -1,0 +1,41 @@
+@import 'variables.sass'
+
+header.main
+  min-height: $headerHeight
+  background-color: #fff
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+
+  .progress__wrap
+    margin: 0 0 0 40px
+    min-width: 340px
+
+    >.progress
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      .tariff
+        text-transform: uppercase
+        font-weight: 800
+        &:before
+          content: 'тариф: '
+          font-weight: 100
+
+    >.progress_bar
+      position: relative
+      width: 100%
+      min-height: 5px
+      border-radius: 10px
+      background-color: #ecf1f4
+
+      >.fill
+        position: absolute
+        width: 10%
+        height: 100%
+        border-radius: 10px
+        background-color: #00a2fb
+
+  #exit
+    margin: 0 40px 0 0
