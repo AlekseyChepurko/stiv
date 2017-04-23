@@ -18,8 +18,7 @@ class SideMenu extends Component {
     };
 
     updateDropdownState(e){
-        console.log("hi");
-        this.state.dropdownState === true ? this.setState({dropdownState: false}) : this.setState({dropdownState: true});
+        this.setState({dropdownState: !this.state.dropdownState});
     }
 
     render(){
@@ -40,22 +39,65 @@ class SideMenu extends Component {
                         <li className="menu_nav__item"><a href="" id="add_account">добавить аккаунт</a></li>
                         <li className="menu_nav__item"><a href="" id="account_list">список аккаунтов</a></li>
                         <li className="menu_nav__item"><a href="" id="fill_accounts">наполнение аккаунтов</a></li>
-                        <li className={"menu_nav__item dropdown " + (this.state.dropdownState ? "active" : "")} onClick={this.updateDropdownState}>
-                            <a href="#" id="accounts_promotion">раскрутка аккаунтов</a>
-                            <ul>
-                                <li><a href="#">Статус раскрутки</a></li>
-                                <li><a href="#">Подписка по конкурентам</a></li>
-                                <li><a href="#">Подписка по списку</a></li>
-                            </ul>
-                        </li>
+
+                        <MenuDropdownItem id="accounts_promotion" dropdownTitle="раскрутка аккаунтов" dropdownItems={
+                            [
+                                {title : "Статус раскрутки",
+                                 link: "#"
+                                },
+
+                                {title: "Подписка по конкурентам",
+                                 link : "#"},
+
+                                {title:"Подписка по списку",
+                                 link: "#"}
+                            ]
+                        }/>
+
                         <li className="menu_nav__item"><a href="" id="audience_collection">сбор аудитории</a></li>
                         <li className="menu_nav__item"><a href="" id="statistic">статистика</a></li>
                     </ul>
                 </nav>
 
             </section>
+
         )
     }
+}
+
+
+class MenuDropdownItem extends Component{
+    constructor(props){
+        super(props);
+
+        this.state = {
+          dropdownState: false,
+          dropdownItems: this.props.dropdownItems.map((item, i) => <li key={i}><a href={item.link} key={i}> {item.title} </a></li> ),
+        };
+
+        this.updateDropdownState = this.updateDropdownState.bind(this);
+    }
+
+    updateDropdownState(){
+        this.setState({dropdownState: !this.state.dropdownState});
+    }
+
+    render(){
+        return(
+            <li className={"menu_nav__item dropdown " + (this.state.dropdownState ? "active" : "")} onClick={this.updateDropdownState}>
+                <a id={this.props.id}>{this.props.dropdownTitle}</a>
+                <ul>
+                    {this.state.dropdownItems}
+                </ul>
+            </li>
+        );
+    };
+}
+
+MenuDropdownItem.defaultProps = {
+    name: "введите название dropdown элемента как name prop",
+    dropdownItems: [{"сабэлементы - items prop в виде объекта {'text link': 'link'}": "#"}],
+    id: ""
 }
 
 SideMenu.defaultProps = {
