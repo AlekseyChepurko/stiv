@@ -2,117 +2,119 @@
   display: flex;
   flex-direction: row;
   padding: 40px; }
-
-#root > .App > .content > main > section > section {
-  border: 1px solid #dce2e5;
-  margin: 0 0 14px 0; }
-
-#root > .App > .content > main .left_wrapper {
-  max-width: 780px;
-  margin: 0 15px 0 0; }
-
-#root > .App > .content > main .left_wrapper > .promo {
-  display: flex;
-  flex-direction: row;
-  max-height: 208px;
-  background-color: white;
-  padding: 54px 48px 48px 63px; }
-
-#root > .App > .content > main .left_wrapper > .promo > .promo_img {
-  max-height: 106px;
-  max-width: 127px;
-  margin: 0 32px 0 0; }
-
-#root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form {
-  margin: 0 0 29px 0; }
-
-#root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form > #promo_number {
-  padding: 12px 15px;
-  max-height: 37px;
-  min-width: 247px;
-  font-size: 13px;
-  box-sizing: border-box;
-  border: 1px solid #dce2e5;
-  background-color: #ecf1f4;
-  margin: 0 26px 0 0; }
-
-#root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form > #promo_number::placeholder {
-  color: #8e8e8e; }
-
-#root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form > button {
-  border: none;
-  color: white;
-  background-color: #00a2fb;
-  padding: 11px 71px 12px 73px;
-  max-height: 37px; }
-
-#root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form > button:hover {
-  cursor: pointer; }
-
-#root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form > button:first-letter {
-  text-transform: uppercase; }
-
-#root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_notice {
-  color: #93a6ba;
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
-
-#root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_notice:before {
-  content: ' ';
-  background: url("../../../public/assets/img/info.png");
-  height: 16px;
-  width: 28px;
-  margin: 0 11px 0 0; }
-
-#root > .App > .content > main .left_wrapper > .forum {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  padding: 29px 48px 36px 36px;
-  background: url("../../../public/assets/img/forum_background.png") center;
-  color: white;
-  z-index: 1;
-  transition: background-size 0.3s;
-  background-size: 100%; }
-
-#root > .App > .content > main .left_wrapper > .forum:before {
-  z-index: -1;
-  content: ' ';
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: rgba(10, 10, 20, 0.6);
-  transition: all 0.3s;
-  left: 0;
-  top: 0; }
-
-#root > .App > .content > main .left_wrapper > .forum:hover {
-  background-size: 110%; }
-
-#root > .App > .content > main .left_wrapper > .forum:hover:before {
-  background: rgba(10, 10, 20, 0.3); }
-
-#root > .App > .content > main .left_wrapper > .forum > .content {
-  max-width: 325px;
-  max-height: 68px; }
-
-#root > .App > .content > main .left_wrapper > .forum > .content > header {
-  font-size: 2.57rem;
-  text-transform: uppercase;
-  margin: 0 0 5px 0; }
-
-#root > .App > .content > main .left_wrapper > .forum > button {
-  padding: 9px 52px 16px 59px;
-  color: white;
-  font-size: 1rem;
-  border: 1px solid white; }
-
-#root > .App > .content > main .left_wrapper > .forum > button:first-letter {
-  text-transform: uppercase; }
-
-#root > .App > .content > main .left_wrapper > .forum > button > a {
-  max-height: 15px; }
+  #root > .App > .content > main > section > section {
+    border: 1px solid #dce2e5;
+    margin: 0 0 14px 0; }
+  #root > .App > .content > main .left_wrapper {
+    max-width: 780px;
+    margin: 0 15px 0 0; }
+    #root > .App > .content > main .left_wrapper > .promo {
+      display: flex;
+      flex-direction: row;
+      max-height: 208px;
+      background-color: white;
+      padding: 54px 48px 48px 63px; }
+      #root > .App > .content > main .left_wrapper > .promo > .promo_img {
+        max-height: 106px;
+        max-width: 127px;
+        margin: 0 32px 0 0; }
+      #root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form {
+        margin: 0 0 29px 0; }
+        #root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form > #promo_number {
+          padding: 12px 15px;
+          max-height: 37px;
+          min-width: 247px;
+          font-size: 13px;
+          box-sizing: border-box;
+          border: 1px solid #dce2e5;
+          background-color: #ecf1f4;
+          margin: 0 26px 0 0; }
+          #root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form > #promo_number::placeholder {
+            color: #8e8e8e; }
+        #root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form > button {
+          border: none;
+          color: white;
+          background-color: #00a2fb;
+          padding: 11px 71px 12px 73px;
+          max-height: 37px; }
+          #root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form > button:hover {
+            cursor: pointer; }
+          #root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_form > button:first-letter {
+            text-transform: uppercase; }
+      #root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_notice {
+        color: #93a6ba;
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        #root > .App > .content > main .left_wrapper > .promo > .promo_content > .promo_notice:before {
+          content: ' ';
+          background: url("../../../public/assets/img/info.png");
+          height: 16px;
+          width: 28px;
+          margin: 0 11px 0 0; }
+    #root > .App > .content > main .left_wrapper > .forum {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 29px 48px 36px 36px;
+      background: url("../../../public/assets/img/forum_background.png") center;
+      color: white;
+      z-index: 1;
+      transition: background-size 0.3s;
+      background-size: 100%; }
+      #root > .App > .content > main .left_wrapper > .forum:before {
+        z-index: -1;
+        content: ' ';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: rgba(10, 10, 20, 0.6);
+        transition: all 0.3s;
+        left: 0;
+        top: 0; }
+      #root > .App > .content > main .left_wrapper > .forum:hover {
+        background-size: 110%; }
+        #root > .App > .content > main .left_wrapper > .forum:hover:before {
+          background: rgba(10, 10, 20, 0.3); }
+      #root > .App > .content > main .left_wrapper > .forum > .content {
+        max-width: 325px;
+        max-height: 68px; }
+        #root > .App > .content > main .left_wrapper > .forum > .content > header {
+          font-size: 2.57rem;
+          text-transform: uppercase;
+          margin: 0 0 5px 0; }
+      #root > .App > .content > main .left_wrapper > .forum > button {
+        padding: 9px 52px 16px 59px;
+        color: white;
+        font-size: 1rem;
+        border: 1px solid white; }
+        #root > .App > .content > main .left_wrapper > .forum > button:first-letter {
+          text-transform: uppercase; }
+        #root > .App > .content > main .left_wrapper > .forum > button > a {
+          max-height: 15px; }
+  #root > .App > .content > main .right_wrapper > .video {
+    position: relative;
+    min-width: 745px;
+    min-height: 364px;
+    transition: all 0.3s;
+    background: url("../../../public/assets/img/instagram-like.png") center;
+    background-size: 100%; }
+    #root > .App > .content > main .right_wrapper > .video:before {
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8); }
+    #root > .App > .content > main .right_wrapper > .video:hover {
+      background-size: 110%; }
+    #root > .App > .content > main .right_wrapper > .video button.play {
+      min-height: 62px;
+      min-width: 62px;
+      position: absolute;
+      background: url("../../../public/assets/img/play.png");
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
