@@ -1,9 +1,12 @@
 @import 'components/common/variables.sass'
+@import 'components/common/mixins.sass'
 #root>.App>.content>main
   display: flex
   flex-direction: row
   padding: 40px
 
+  @include laptop
+    flex-direction: column
   >section>section
     border: 1px solid map-get($mainColors, sectionBorder)
     margin: 0 0 14px 0
@@ -11,6 +14,9 @@
   .left_wrapper
     max-width: 780px
     margin: 0 15px 0 0
+
+    @include laptop
+      max-width: none
 
     >.promo
       display: flex
@@ -59,7 +65,7 @@
           align-items: center
           &:before
             content: ' '
-            background: url($imagePath + "info.png")
+            background: url($imagePath + "info.png") no-repeat
             height: 16px
             width: 28px
             margin: 0 11px 0 0
@@ -71,7 +77,7 @@
       align-items: center
       position: relative
       padding: 29px 48px 36px 36px
-      background: url($imagePath +  "forum_background.png") center
+      background: url($imagePath +  "forum_background.png") center no-repeat
       color: white
       z-index: 1
       transition: background-size $transitionTime
