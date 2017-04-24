@@ -32,7 +32,16 @@ ReactDOM.render(
                 </section>
             </section>
 
-            <section className="right_wrapper">right</section>
+            <section className="right_wrapper">
+                <section className="video">
+                    {/* some content such video should be here */}
+                    <button className="play"></button>
+                </section>
+
+                <section className="news">
+                    news
+                </section>
+            </section>
     </App>,
   document.getElementById('root')
 );
