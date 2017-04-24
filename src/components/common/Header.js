@@ -3,15 +3,9 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
-import "../assets/styles/components/Header.css";
+import "../../assets/styles/components/common/Header.css";
 
 class Header extends Component {
-
-    // constructor(props){
-    //     super(props);
-    // };
-
-
     render(){
         return(
             <header className="main">
