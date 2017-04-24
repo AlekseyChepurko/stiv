@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import promoLogoImg from '../public/assets/img/promo_logo.png';
 import "./assets/styles/normolize.css"
 import './assets/styles/index.css';
 import App from './components/App';
+import NewsComponent from "./components/NewsComponent";
 
 ReactDOM.render(
     <App>
@@ -40,8 +41,9 @@ ReactDOM.render(
 
                 <section className="news">
 
-                    <ul className="news_wrap"> </ul>
-
+                    <ul className="news_wrap">
+                        <NewsComponent />
+                    </ul>
                     <nav></nav>
 
                 </section>
@@ -51,26 +53,3 @@ ReactDOM.render(
 )
 
 
-class MenuDropdownItem extends Component{
-    constructor(props){
-        super(props);
-
-        this.state = {
-            dropdownState: false,
-        };
-
-        this.updateDropdownState = this.updateDropdownState.bind(this);
-    }
-
-    updateDropdownState(){
-        this.setState({dropdownState: !this.state.dropdownState});
-    }
-
-    render(){
-        return(
-            <li className=" dropdown ">
-
-            </li>
-        );
-    };
-}
