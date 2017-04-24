@@ -21,5 +21,17 @@
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlekseyChepurko/stiv.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlekseyChepurko/stiv/issues"
+  },
+  "homepage": "https://github.com/AlekseyChepurko/stiv#readme"
 }
