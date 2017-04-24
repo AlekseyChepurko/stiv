@@ -2,8 +2,8 @@
  * Created by Алексей on 19.04.2017.
  */
 import React, { Component } from 'react';
-import "../assets/styles/components/SideMenu.css";
-import logo from "../assets/img/stiv_logo.png";
+import "../../assets/styles/components/common/SideMenu.css";
+import logo from "../../assets/img/stiv_logo.png";
 
 class SideMenu extends Component {
 
@@ -36,26 +36,31 @@ class SideMenu extends Component {
                 <nav className="sideMenu__navigation">
                     <header>меню</header>
                     <ul className="menu_nav">
-                        <li className="menu_nav__item"><a href="" id="add_account">добавить аккаунт</a></li>
-                        <li className="menu_nav__item"><a href="" id="account_list">список аккаунтов</a></li>
-                        <li className="menu_nav__item"><a href="" id="fill_accounts">наполнение аккаунтов</a></li>
+                        <li className="menu_nav__item"><a href="#" id="add_account">добавить аккаунт</a></li>
+                        <li className="menu_nav__item"><a href="#" id="account_list">список аккаунтов</a></li>
+                        <li className="menu_nav__item"><a href="#" id="fill_accounts">наполнение аккаунтов</a></li>
 
-                        <MenuDropdownItem id="accounts_promotion" dropdownTitle="раскрутка аккаунтов" dropdownItems={
+                        <MenuDropdownItem commonClass="menu_nav__item" id="accounts_promotion" dropdownTitle="раскрутка аккаунтов" dropdownItems={
                             [
                                 {title : "Статус раскрутки",
-                                 link: "#"
+                                 link: "#",
+                                 id: "promotion_status"
                                 },
 
                                 {title: "Подписка по конкурентам",
-                                 link : "#"},
+                                 link : "#",
+                                 id: "opponents_subscribe"
+                                },
 
                                 {title:"Подписка по списку",
-                                 link: "#"}
+                                 link: "#",
+                                 id: "list_subscribe"
+                                }
                             ]
                         }/>
 
-                        <li className="menu_nav__item"><a href="" id="audience_collection">сбор аудитории</a></li>
-                        <li className="menu_nav__item"><a href="" id="statistic">статистика</a></li>
+                        <li className="menu_nav__item"><a href="#" id="audience_collection">сбор аудитории</a></li>
+                        <li className="menu_nav__item"><a href="#" id="statistic">статистика</a></li>
                     </ul>
                 </nav>
 
@@ -72,7 +77,7 @@ class MenuDropdownItem extends Component{
 
         this.state = {
           dropdownState: false,
-          dropdownItems: this.props.dropdownItems.map((item, i) => <li key={i}><a href={item.link} key={i}> {item.title} </a></li> ),
+          dropdownItems: this.props.dropdownItems.map((item, i) => <li key={i}><a href={item.link} id={item.id} key={i}> {item.title} </a></li> ),
         };
 
         this.updateDropdownState = this.updateDropdownState.bind(this);
@@ -84,8 +89,8 @@ class MenuDropdownItem extends Component{
 
     render(){
         return(
-            <li className={"menu_nav__item dropdown " + (this.state.dropdownState ? "active" : "")} onClick={this.updateDropdownState}>
-                <a id={this.props.id}>{this.props.dropdownTitle}</a>
+            <li className={ this.props.commonClass + " dropdown " + (this.state.dropdownState ? "active" : "")}>
+                <a href="#" id={this.props.id} onClick={this.updateDropdownState}> {this.props.dropdownTitle} </a>
                 <ul>
                     {this.state.dropdownItems}
                 </ul>
@@ -97,7 +102,8 @@ class MenuDropdownItem extends Component{
 MenuDropdownItem.defaultProps = {
     name: "введите название dropdown элемента как name prop",
     dropdownItems: [{"сабэлементы - items prop в виде объекта {'text link': 'link'}": "#"}],
-    id: ""
+    commonClass: "common_class",
+    id: "idNeeded"
 }
 
 SideMenu.defaultProps = {
