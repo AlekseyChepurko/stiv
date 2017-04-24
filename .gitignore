@@ -8,6 +8,8 @@
 
 # production
 /build
+/src/assets/styles/**/*.css
+
 
 # misc
 .DS_Store
@@ -17,3 +19,5 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea/
+
+debug.log
