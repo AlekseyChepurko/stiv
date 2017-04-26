@@ -41,9 +41,8 @@ ReactDOM.render(
 
                 <section className="news">
 
-                    <ul className="news_wrap">
                         <NewsComponent />
-                    </ul>
+
                     <nav></nav>
 
                 </section>
