@@ -1,0 +1,45 @@
+@import '../components/common/variables.sass'
+@import '../components/common/mixins.sass'
+
+
+section.news
+  >.news_wrapper
+    >.news_item.wrapper
+      display: flex
+      flex-direction: row
+      background: white
+      margin: 0 0 14px 0
+
+      >img
+        max-height: 145px
+
+      >.news_content
+        padding: 22px 28px 21px 25px
+
+        >header
+          font-weight: bold
+          margin: 0 0 11px 0
+          display: flex
+          flex-direction: row
+          align-items: center
+          justify-content: space-between
+
+          >.title
+            >a
+              display: inline-block
+
+            &:before
+              content: ' '
+              display: inline-block
+              height: 16px
+              width: 16px
+              margin: 0 13px 0 0
+              background: url('../' + $imagePath + "newsItemHeader.png")
+
+          >.creation_date
+            font-size: 0.875em
+            color: #9a9a9a
+
+        >.content
+          color: #7c8ca5
+          line-height: 20px
