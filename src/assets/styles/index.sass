@@ -3,7 +3,8 @@
 #root>.App>.content>main
   display: flex
   flex-direction: row
-  padding: 40px
+  padding: 40px 0 0 40px
+
 
   @include laptop
     flex-direction: column
@@ -123,6 +124,7 @@
           max-height: 15px
 
   .right_wrapper
+    max-width: 745px
     >.video
       position: relative
       min-width: 745px
