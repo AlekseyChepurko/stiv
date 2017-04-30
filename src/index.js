@@ -39,13 +39,8 @@ ReactDOM.render(
                     <button className="play"></button>
                 </section>
 
-                <section className="news">
-
                         <NewsComponent />
 
-                    <nav></nav>
-
-                </section>
             </section>
     </App>,
   document.getElementById('root')

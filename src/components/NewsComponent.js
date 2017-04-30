@@ -90,17 +90,10 @@ class NewsComponent extends Component{
     };
 }
 
-NewsTabs.defaultProps = {
-    num: 0,
-    active: false,
-}
-
-
 NewsComponent.defaultProps = {
                             newsPerPage: 3,
                             currentPage: 2,
                             paeToShow: 3,
-
                             // props for news item: title, imgDir, imgName, creationDate, link, text
                             news: [{first: "first"}, {}, {}, {}, {}, {}, {}, {}, {}, {last:"last"}]
 }

@@ -125,6 +125,11 @@
 
   .right_wrapper
     max-width: 745px
+
+    @include laptop
+      max-width: none
+      margin: 0 15px 0 0
+
     >.video
       position: relative
       min-width: 745px
@@ -138,10 +143,13 @@
         position: absolute
         width: 100%
         height: 100%
+        transition: all $transitionTime
         background: rgba(0,0,0, 0.8)
 
       &:hover
         background-size: 110%
+        &:before
+          background: rgba(0,0,0, 0.4)
 
       button.play
         min-height: 62px
