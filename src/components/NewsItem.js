@@ -10,7 +10,6 @@ class NewsItem extends Component{
         super(props);
 
         this.state = {
-            currentPage: this.props.currentPage,
             img: this.props.imgDir + this.props.imgName,
         };
     }
@@ -32,12 +31,12 @@ class NewsItem extends Component{
 }
 
 NewsItem.defaultProps = {
-    title: "Улучшенная навигация",
-    imgDir: "./assets/img/",
-    imgName: "defaultNewsImg.png",
-    creationDate: "24.03.2014",
-    link: "#",
-    text: "Если при получении новых карт, в колоде уже есть подобные, их можно объединять, создавая удивительные эффекты на выбор. Например, один и тот же герой в последстсм ожет стать танком защиты"
+                        title: "Улучшенная навигация",
+                        imgDir: "./assets/img/",
+                        imgName: "defaultNewsImg.png",
+                        creationDate: "24.03.2014",
+                        link: "#",
+                        text: "Если при получении новых карт, в колоде уже есть подобные, их можно объединять, создавая удивительные эффекты на выбор. Например, один и тот же герой в последстсм ожет стать танком защиты"
 }
 
 export default NewsItem;
