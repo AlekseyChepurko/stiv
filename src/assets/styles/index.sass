@@ -9,10 +9,12 @@
   @include laptop
     flex-direction: column
   >section>section
-    border: 1px solid map-get($mainColors, sectionBorder)
     margin: 0 0 14px 0
 
   .left_wrapper
+    &>section
+      border: 1px solid map-get($mainColors, sectionBorder)
+
     max-width: 780px
     margin: 0 15px 0 0
 
@@ -134,7 +136,7 @@
       position: relative
       min-height: 364px
       transition: all $transitionTime
-      background: url( $imagePath + "instagram-like.png") center
+      background: url( $imagePath + "instagram-like.png") center no-repeat
       background-size: 100%
 
       &:before
