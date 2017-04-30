@@ -5,7 +5,7 @@ import "./assets/styles/normolize.css"
 import './assets/styles/index.css';
 import App from './components/App';
 import NewsComponent from "./components/NewsComponent";
-
+import Statistics from "./components/Statistics";
 ReactDOM.render(
     <App>
             <section className="left_wrapper">
@@ -31,6 +31,8 @@ ReactDOM.render(
                         </a>
                     </button>
                 </section>
+
+                <Statistics/>
             </section>
 
             <section className="right_wrapper">
