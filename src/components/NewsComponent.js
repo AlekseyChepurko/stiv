@@ -92,7 +92,7 @@ class TabControl extends Component {
 
 
         return(
-            <div className="tab_nuber_selector">
+            <div className="tab_number_selector">
                 { inputs }
             </div>
         )
