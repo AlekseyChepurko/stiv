@@ -3,8 +3,24 @@
 
 
 section.news
+
   >.news_wrapper
-    >ul
+    position: relative
+
+    >ul.news_tab
+
+      opacity: 0
+      transition: opacity $transitionTime
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+
+      &.active
+        opacity: 1
+        z-index: auto
+        position: relative
+
       >.news_item.wrapper
         display: flex
         flex-direction: row
@@ -44,3 +60,22 @@ section.news
           >.content
             color: #7c8ca5
             line-height: 20px
+
+  >.tab_number_selector
+    font-size: 1rem
+    text-align: center
+    
+    >label
+      margin: 0 10px 0 0
+      cursor: pointer
+      color: #959da2
+      border-radius: 50%
+
+      &[for="current_tab"]
+        color: white
+        background: #00a2fb
+        padding: 3px 8px
+
+
+      >input
+        display: none
