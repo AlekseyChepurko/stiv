@@ -8,7 +8,7 @@ import "../../assets/styles/components/common/Header.css";
 class Header extends Component {
     render(){
         return(
-            <header className="main">
+            <header className="main" id="main_header">
                 <section className="progress__wrap">
                     <div className="progress">
                         <div className="tariff">{this.props.tariff}</div>
