@@ -11,6 +11,7 @@ import {
 
 
 import Profile from "./components/LoggedIn/Profile";
+import AccountSettings from "./components/LoggedIn/AccountSettings";
 
 import Registration from "./components/LoggedOut/Registration";
 import ForgotPass from "./components/LoggedOut/ForgotPass";
@@ -23,6 +24,8 @@ ReactDOM.render(
     <Router >
         <div className="router">
             <Route exact path="/" component={Profile} />
+            <Route exact path="/account_settings" component={AccountSettings} />
+
 
             <Route exact path="/login" component={Login} />
 
