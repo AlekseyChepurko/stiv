@@ -13,7 +13,7 @@ export default class Common extends Component {
 
     render(){
         return(
-            <main className={this.props.pageName}>
+            <main className={`logged_out ${this.props.pageName}`}>
                 <section className="content">
                     <img src={logo} alt="stiv"/>
 
