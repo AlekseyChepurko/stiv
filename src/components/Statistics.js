@@ -5,17 +5,17 @@ import React, { Component } from 'react';
 import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from "recharts";
 
 
-const CustomizedDot = React.createClass({
+class CustomizedDot extends Component{
     render () {
         const {cx, cy, stroke, payload, value} = this.props;
 
         return (
             <svg x={cx - 5} y={cy - 5} width={100} height={100} fill="green" viewBox="0 0 1024 1024">
-                <circle cx="50" cy="50" r="40" stroke-width="10" stroke="#009ff7" fill="#009ff7"/>
+                <circle cx="50" cy="50" r="40" strokeWidth="10" stroke="#009ff7" fill="#009ff7"/>
             </svg>
         );
     }
-});
+};
 
 class Statistics extends Component {
 
