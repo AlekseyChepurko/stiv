@@ -2,7 +2,7 @@
  * Created by Алексей on 05.05.2017.
  */
 import React, {Component} from 'react'
-
+import './assets/main.css'
 export default class Right extends Component {
     render(){
 
