@@ -24,6 +24,7 @@ ReactDOM.render(
     <Router >
         <div className="router">
             <Route exact path="/" component={Profile} />
+            <Route exact path="/profile" component={Profile} />
             <Route exact path="/account_settings" component={AccountSettings} />
 
 
