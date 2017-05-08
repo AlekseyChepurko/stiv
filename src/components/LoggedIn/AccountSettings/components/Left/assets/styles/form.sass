@@ -1,0 +1,77 @@
+@import '../../../Common/assets/styles/variables.sass'
+
+>section.content>main>.left>main>form
+  display: flex
+  flex-direction: column
+  align-items: left
+  background: white
+  padding: 0 0 0 50px
+
+
+
+  >button[type="submit"]
+    background: map-get($mainColors, blue)
+    min-width: 300px
+    min-height: 40px
+    margin: 0 0 76px 180px
+    color: white
+    &:first-letter
+      text-transform: uppercase
+
+  .input_wrap
+
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin: 0 0 15px 0
+
+    &:before
+      font-size: 1.15rem
+      min-width: 150px
+      margin: 0 30px 0 0
+
+    &#avatar_upload>img
+      min-width: 88px
+      margin: 0 92px 0 0
+
+    &#oldPassword:before
+      content: 'Старый пароль:'
+
+    &#newPassword:before
+      content: 'Новый пароль:'
+
+    &#newPasswordRepeated
+      margin: 0 0 37px 0
+      &:before
+        content: 'Повторите пароль'
+
+
+    &#email
+      margin: 0 0 35px 0
+      &:before
+        content: 'Изменить почту:'
+
+    >input
+      display: block
+      min-width: 300px
+      max-height: 40px
+      padding: 15px
+      box-sizing: border-box
+      background: map-get($mainColors, background)
+      border: 1px solid map-get($mainColors, sectionBorder)
+
+  >section#info_block
+    color: #7d8a9a
+    max-width: 565px
+    line-height: 20px
+    margin: 0 0 30px 0
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    &:before
+      content: ' '
+      height: 18px
+      width: 33px
+      margin: 0 15px 0 0
+      background: url("../../../Common/assets/imgs/info_logo_gray.png") center no-repeat

@@ -38,7 +38,7 @@ export default class AcoountSettings extends Component {
     render(){
 
         return(
-            <Common className="main" style={styles}>
+            <Common pageName="account_settings" style={styles}>
                 <Left header={leftHeader} />
                 <Right header={rightHeader}/>
             </Common>
