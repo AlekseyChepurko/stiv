@@ -12,15 +12,35 @@ const styles = {
     flexDirection: 'row'
 }
 
-const headerHight = 110
+const headerStyles = {
+    minHeight: 110,
+    background: "#00a2fb",
+    color: "white",
+    padding: 24,
+    paddingRight: 50,
+    paddingLeft: 45,
+    boxSizing: 'border-box',
+};
+
+const leftHeader = {
+    title: <header><b>Настройка</b> аккаунта</header>,
+    text: "В сентябре прошлого года южнокорейская компания можно скорее обменять аппараты, поскольку ",
+    styles: headerStyles
+};
+const rightHeader = {
+    title: <header><b>Оплата</b> аккаунта</header>,
+    text: "В сентябре прошлого года южнокорейская компания можно скорее обменять аппараты, поскольку ",
+    styles: headerStyles
+};
+
 
 export default class AcoountSettings extends Component {
     render(){
 
         return(
-            <Common pageName="account_settings" styles={styles} headerHight={headerHight}>
-                <Left />
-                <Right/>
+            <Common className="main" style={styles}>
+                <Left header={leftHeader} />
+                <Right header={rightHeader}/>
             </Common>
         )
     }

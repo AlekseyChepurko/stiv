@@ -3,19 +3,16 @@
  */
 
 import React, {Component} from 'react'
-
+import Header from '../Common'
+import './assets/styles/main.css'
 
 
 export default class Left extends Component {
     render(){
 
-        const styles = {
-            minWidth: 1070,
-            height: this.props.headerHeight
-        }
         return(
-            <section className="left" style={styles}>
-
+            <section className="left">
+                <Header header={this.props.header}/>
             </section>
         )
     }

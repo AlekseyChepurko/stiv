@@ -1,0 +1,25 @@
+@import './variables.sass'
+
+header.account_settings
+  background: map-get($mainColors, blue)
+  color: white
+  padding: 24px 50px 24px 45px
+  box-sizing: border-box
+  min-height: 110px
+
+  >header
+    font-size: 21px
+    margin: 0 0 9px 0
+
+  >.content
+    max-width: 360px
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    &:before
+      content: ' '
+      background: url("../imgs/info_logo.png") center
+      height: 15px
+      width: 31px
+      margin: 0 15px 0 0
