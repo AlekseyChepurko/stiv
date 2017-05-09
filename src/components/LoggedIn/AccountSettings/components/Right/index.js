@@ -4,6 +4,9 @@
 
 import React, {Component} from 'react'
 import Header from '../Common'
+import Rang from './components/Rang'
+import PaymentForm from './components/PaymentForm'
+import './assets/styles/main.css'
 
 export default class Right extends Component {
     render(){
@@ -14,6 +17,11 @@ export default class Right extends Component {
         return(
             <section className="right">
                 <Header header={this.props.header}/>
+
+                <main>
+                    <PaymentForm />
+                    <Rang />
+                </main>
             </section>
         )
     }

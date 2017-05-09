@@ -1,0 +1,39 @@
+.account_settings>.content>main>.right>main>section.payment_form_wrap
+
+  margin: 0 0 20px 0
+  padding: 31px 0 0 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+
+  @import './price.sass'
+  @import './payPeriodSelect.sass'
+
+  .info
+    max-width: 360px
+    text-align: left
+    display: flex
+    flex-direction: row
+    align-items: center
+    color: #7f8897
+    line-height: 20px
+    margin: 0 0 40px 0
+    &:before
+      content: ' '
+      position: relative
+      display: block
+      width: 32px
+      height: 18px
+      margin: 0 14px 0 0
+      background: url('../../../../Common/assets/imgs/info_logo_gray.png') center no-repeat
+
+
+  button[type="submit"]
+    background: #00a2fb
+    color: white
+    min-width: 250px
+    min-height: 40px
+    margin: 0 0 48px 0
+    &:first-letter
+      text-transform: uppercase

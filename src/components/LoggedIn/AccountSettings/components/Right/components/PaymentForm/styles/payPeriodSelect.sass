@@ -1,0 +1,58 @@
+section.pay_period_select
+
+  display: flex
+  position: relative
+  flex-direction: row
+  justify-content: space-between
+  margin: 0 0 25px 0
+
+  &:after
+    content: ' '
+    position: absolute
+    width: 96%
+    height: 5px
+    top: 9px
+    left: 50%
+    transform: translateX(-50%)
+    background: #cfcfcf
+
+  >div
+    display: flex
+    position: relative
+    flex-direction: column-reverse
+    align-items: left
+    color: #959595
+
+    &:before
+      content: ' '
+      display: block
+      height: 10px
+      width: 1px
+      position: absolute
+      top: 6px
+      left: 50%
+      opacity: 1
+      background: #cecece
+    &:first-child:before, &:last-child:before
+      content: none
+
+    >label:hover, input:hover
+      cursor: pointer
+
+  input
+    margin: 0 auto 6px auto
+    opacity: 0
+    height: 19px
+    width: 19px
+
+    &:before
+      content: ' '
+      display: block
+      height: 19px
+      width: 19px
+      background-color: #a4c9dc
+      border-radius: 50%
+      position: absolute
+      z-index: 20
+    &:checked
+      opacity: 1
