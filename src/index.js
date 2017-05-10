@@ -12,6 +12,8 @@ import {
 
 import Profile from "./components/LoggedIn/Profile";
 import AccountSettings from "./components/LoggedIn/AccountSettings";
+import StatisticsContent from "./components/LoggedIn/StatisticsContent";
+
 
 import Registration from "./components/LoggedOut/Registration";
 import ForgotPass from "./components/LoggedOut/ForgotPass";
@@ -26,6 +28,8 @@ ReactDOM.render(
             <Route exact path="/" component={Profile} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/account_settings" component={AccountSettings} />
+            <Route exact path="/statistics" component={StatisticsContent} />
+
 
 
             <Route exact path="/login" component={Login} />
