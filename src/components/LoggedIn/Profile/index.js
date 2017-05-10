@@ -13,7 +13,7 @@ class Profile extends Component {
 
     render(){
         return(
-            <Common>
+            <Common pageName="profile">
                 <section className="left_wrapper">
                     <section className="promo">
                         <img src={promoLogoImg} className="promo_img" alt="promo_logo"></img>

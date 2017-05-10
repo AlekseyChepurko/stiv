@@ -1,0 +1,60 @@
+@import "variables.sass"
+
+>#statistics_chart>.period_select
+  align-self: flex-end
+  margin: 0 0 39px 0
+  display: flex
+  flex-direction: row
+  align-items: center
+
+  >p
+    color: #686c71
+    
+    &:first-child:first-letter
+      text-transform: uppercase
+
+  input
+    padding: 13px
+    background: #596679
+    border: none
+    border-radius: 2px
+    color: white
+    margin: 0 10px 6px 10px
+    max-width: 150px
+    box-sizing: border-box
+    &:hover
+      cursor: pointer
+
+  .rdtPicker
+    width: 150px
+    padding: 0
+    border: none
+    margin-left: 10px
+    background: #596679
+    table
+      border-radius: 2px
+      >thead
+        background: #252e3a
+        color: white
+        border: none
+        >tr:nth-child(2)
+          display: none
+
+        >tr
+          >th
+            vertical-align: middle
+            &:first-letter
+              text-transform: uppercase
+            &:hover
+              background: #252e3a
+
+      >tbody
+        background: #596679
+        color: white
+        border: none
+        >tr
+          >td
+            vertical-align: middle
+            font-size: 12px
+            &:hover
+              background: #596679

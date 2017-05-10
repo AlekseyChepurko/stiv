@@ -1,0 +1,17 @@
+@import "variables.sass"
+
+section.logged_in.statistics>.content>main>.content
+  width: 100%
+  margin: 34px 38px 100px 38px
+  background: white
+  border: solid 1px map-get($mainColors, sectionBorder)
+
+  @import './info.sass'
+  @import './periodSelect.sass'
+
+  >section#statistics_chart
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 1380px
+    margin: auto

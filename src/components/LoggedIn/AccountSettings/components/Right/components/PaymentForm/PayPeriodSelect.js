@@ -5,7 +5,7 @@
 import React, {Component} from 'react'
 
 export default class PayPeriodSelect extends Component {
-
+//TODO several states for each select
     render(){
         return(
             <section className="pay_period_select">
