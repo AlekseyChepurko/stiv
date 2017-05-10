@@ -4,13 +4,40 @@ table.account_status
 
   tr
     padding: 0 185px
-    display: flex
-    flex-direction: row
-    justify-content: space-between
+    //display: flex
+    //flex-direction: row
+    //justify-content: space-between
 
   >thead>tr>th
     text-transform: uppercase
     color: #6c7888
 
   >tbody
+    >tr
+      &:nth-child(2n+1)
+        background: #edf4f7
 
+      >td
+        line-height: 60px
+        vertical-align: middle
+
+        >img
+          height: 48px
+          width: 48px
+          border-radius: 50%
+          border: none
+          background: #1ca4f7
+
+
+
+button#download_accounts
+  background: #1ca4f7
+  color: white
+  min-width: 230px
+  min-height: 42px
+  display: block
+  margin: auto
+  margin-bottom: 40px
+
+  &:first-letter
+    text-transform: uppercase

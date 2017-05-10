@@ -5,17 +5,28 @@
 import React, {Component} from 'react'
 import {
     Link
-} from 'react-router-dom';
+} from 'react-router-dom'
 
 import './styles/accountTable.css'
-
 export default class AccountTable extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            lines: this.props.lines
+        }
+    }
+
     render(){
         return(
-            <table className="account_status">
-                <TableHead />
-                <TableBody />
-            </table>
+            <section className="account_status_wrap">
+                <table className="account_status">
+                    <TableHead />
+                    <TableBody lines={this.props.lines}/>
+                </table>
+
+                <DownloadAccountsBtn />
+            </section>
         )
     }
 }
@@ -84,6 +95,14 @@ class TableLine extends Component {
                     <Link to={this.state.link}/>
                 </td>
             </tr>
+        )
+    }
+}
+
+class DownloadAccountsBtn extends Component {
+    render(){
+        return(
+            <button id="download_accounts" onClick={()=>{console.log("downloading data...")}}>загрузить еще</button>
         )
     }
 }

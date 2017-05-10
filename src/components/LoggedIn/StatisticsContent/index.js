@@ -14,6 +14,14 @@ import AccountTable from './AccountTable'
 import './styles/main.css'
 
 export default class StatisticsContent extends Component {
+    constructor (props){
+        super(props)
+        this.state = {
+            tableLines: [{},{},{},{},{},{},{},{},{},{}]
+        }
+
+    }
+
     render(){
         return(
             <Common pageName="statistics">
@@ -26,7 +34,7 @@ export default class StatisticsContent extends Component {
                         <Statistics width={1380} height={243}  />
                     </section>
 
-                    <AccountTable/>
+                    <AccountTable lines={this.state.tableLines}/>
 
                 </section>
             </Common>
