@@ -7,6 +7,8 @@ import Common from "../../common/Common"
 import Statistics from '../../Statistics'
 import PeriodSelect from './PeriodSelect'
 import Info from './Info'
+import AccountTable from './AccountTable'
+
 
 
 import './styles/main.css'
@@ -23,6 +25,8 @@ export default class StatisticsContent extends Component {
                         <PeriodSelect/>
                         <Statistics width={1380} height={243}  />
                     </section>
+
+                    <AccountTable/>
 
                 </section>
             </Common>
