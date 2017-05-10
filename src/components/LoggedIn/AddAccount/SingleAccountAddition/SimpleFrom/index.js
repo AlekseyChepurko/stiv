@@ -3,23 +3,15 @@
  */
 
 import React, {Component} from 'react'
+import InputForm from '../InputForm'
 
-export default class SingleAccount extends  Component {
-    render(){
-        return(
-            <section className="single_account_warp">
-                <StandartForm />
-            </section>
-        )
-    }
-}
-
-class StandartForm extends Component {
+export default class SimpleForm extends Component {
     render(){
         return(
             <form action="#">
                 <input type="text" name="name"/>
                 <input type="password" id="password" />
+
             </form>
         )
     }
