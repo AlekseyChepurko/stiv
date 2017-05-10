@@ -39,8 +39,8 @@ class Statistics extends Component {
 
     render(){
         return(
-            <AreaChart width={700} height={400} data={this.state.data}
-                       margin={{top: 10, right: 30, left: 0, bottom: 0}}>
+            <AreaChart width={ this.props.width ? this.props.width : 700} height={ this.props.height ? this.props.height : 400} data={this.state.data}
+                      >
                 <XAxis dataKey="name"/>
                 <YAxis />
                 <CartesianGrid strokeDasharray="10000 0"/>
