@@ -23,7 +23,7 @@ export default class FileAddition extends Component {
     render(){
         return(
             <form action="#" style={formStyle}>
-                <input type="file" style={inputStyle}/>
+                <input type="file" style={inputStyle} name="accountsFile"/>
                 <button type="submit" style={buttonStyle}>Добавить аккаунты</button>
             </form>
         )
