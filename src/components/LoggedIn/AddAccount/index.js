@@ -4,7 +4,6 @@
 import React, {Component} from 'react'
 import Common from '../../common/Common'
 
-import Title from './Title'
 import SingleAccountAddition from './SingleAccountAddition'
 import MultipleAccountsAddition from './MultipleAccountsAddition'
 
@@ -12,6 +11,8 @@ import './styles/main.css'
 
 const styles = {
     margin: 40,
+    marginBottom: 0,
+    flexDirection: "column"
 }
 
 export default class AddAccount extends Component {
