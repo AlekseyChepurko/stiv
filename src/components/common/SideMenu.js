@@ -40,7 +40,7 @@ class SideMenu extends Component {
                     <header>меню</header>
                     <ul className="menu_nav">
                         <li className="menu_nav__item"><Link to="/add_account" id="add_account">добавить аккаунт</Link></li>
-                        <li className="menu_nav__item"><Link to="/account_list" id="account_list">список аккаунтов</Link></li>
+                        <li className="menu_nav__item"><Link to="/accounts_list" id="account_list">список аккаунтов</Link></li>
                         <li className="menu_nav__item"><Link to="/fill_accounts" id="fill_accounts">наполнение аккаунтов</Link></li>
 
                         <MenuDropdownItem commonClass="menu_nav__item" id="accounts_promotion" dropdownTitle="раскрутка аккаунтов" dropdownItems={
