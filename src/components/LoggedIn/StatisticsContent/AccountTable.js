@@ -3,9 +3,9 @@
  */
 
 import React, {Component} from 'react'
-import {
-    Link
-} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+
+import defaultAvatar from './imgs/defaultAvatar.png'
 
 import './styles/accountTable.css'
 export default class AccountTable extends Component {
@@ -74,7 +74,7 @@ class TableLine extends Component {
     constructor(props){
         super(props);
         this.state = {
-            avatar: this.props.avatar ? this.props.avatar : "",
+            avatar: this.props.avatar ? this.props.avatar : defaultAvatar,
             title: this.props.title ? this.props.title : "Чего-то там",
             tenThounthend: this.props.tenThounthend ? this.props.tenThounthend : "В работе",
             threeThouthend: this.props.threeThouthend ? this.props.threeThouthend : "Чего-то там",
