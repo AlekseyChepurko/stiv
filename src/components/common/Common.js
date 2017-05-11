@@ -9,6 +9,11 @@ import SideMenu from './SideMenu';
 import '../../assets/styles/normolize.css'
 import '../../assets/styles/components/common/defaults.css'
 
+const commonStyle = {
+    margin: 40,
+    marginBottom: 0
+};
+
 export default class Common extends Component {
     render() {
         return(
@@ -18,7 +23,7 @@ export default class Common extends Component {
                 <section className="content">
                     <Header/>
 
-                    <main style={ this.props.styles ? this.props.styles : {}}>
+                    <main style={ this.props.styles ? this.props.styles : commonStyle}>
                         { this.props.children }
                     </main>
                 </section>
