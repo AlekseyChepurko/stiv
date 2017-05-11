@@ -13,9 +13,9 @@ const header = {
 
 const style = {
     marginRight: 20,
-    minWidth: 1220
+    minWidth: 1220,
+    border: "1px solid #dce2e5"
 };
-
 export default class Left extends Component {
     render(){
         for(const item in this.props.style){

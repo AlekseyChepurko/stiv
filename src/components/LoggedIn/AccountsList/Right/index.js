@@ -11,7 +11,8 @@ const header = {
 };
 
 const style = {
-    flex: 1
+    flex: 1,
+    border: "1px solid #dce2e5"
 };
 
 export default class Right extends Component {
