@@ -2,7 +2,7 @@
  * Created by Алексей on 11.05.2017.
  */
 import React, {Component} from 'react'
-import Header from './Header'
+import Header from '../Header'
 
 const header = {
     title: '<b>Ваши</b> аккаунты',
