@@ -2,7 +2,8 @@
  * Created by Алексей on 11.05.2017.
  */
 import React, {Component} from 'react'
-import Header from './Header'
+import Header from '../Header'
+import Form from './Form'
 
 const header = {
     title: '<b>Настройка</b> МФ/МЛ',
@@ -22,7 +23,11 @@ export default class Left extends Component {
         }
         return(
             <section className="left_section" style={style}>
-                <Header header={header} textMaxWidth={530} paddingLeft={this.props.paddingLeft}/>
+                <Header
+                    header={header}
+                    textMaxWidth={530}
+                    paddingLeft={this.props.paddingLeft}/>
+                <Form/>
             </section>
         )
     }
