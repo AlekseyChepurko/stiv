@@ -14,7 +14,7 @@ import Profile from "./components/LoggedIn/Profile";
 import AddAccount from "./components/LoggedIn/AddAccount";
 import AccountSettings from "./components/LoggedIn/AccountSettings";
 import StatisticsContent from "./components/LoggedIn/StatisticsContent";
-
+import AccountsList from "./components/LoggedIn/AccountsList";
 
 import Registration from "./components/LoggedOut/Registration";
 import ForgotPass from "./components/LoggedOut/ForgotPass";
@@ -31,6 +31,7 @@ ReactDOM.render(
             <Route exact path="/account_settings" component={AccountSettings} />
             <Route exact path="/statistics" component={StatisticsContent} />
             <Route exact path="/add_account" component={AddAccount} />
+            <Route exact path="/accounts_list" component={AccountsList} />
 
 
             <Route exact path="/login" component={Login} />
