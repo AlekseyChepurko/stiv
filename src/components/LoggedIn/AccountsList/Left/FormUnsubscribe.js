@@ -87,11 +87,7 @@ class Field extends Component {
                 />
                 <label
                     htmlFor={`${this.props.field.name}_text`}
-                    style={{
-                        width: 185,
-                        marginRight: 15,
-                        marginLeft: 15
-                    }}>
+                    style={{width: 185, marginRight: 15, marginLeft: 15}}>
                         {this.props.field.parametr}
                 </label>
 
