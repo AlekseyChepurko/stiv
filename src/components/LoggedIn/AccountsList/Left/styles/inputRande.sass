@@ -1,7 +1,7 @@
 .input-range__slider
   appearance: none
-  background: #3f51b5
-  border: 1px solid #3f51b5
+  background: #0098ea
+  border: 1px solid #0098ea
   border-radius: 100%
   cursor: pointer
   display: block
@@ -46,7 +46,7 @@
 
 .input-range__label--value
   position: absolute
-  top: -1.8rem
+  top: -2.8rem
 
 .input-range__label-container
   left: -50%
@@ -73,9 +73,27 @@
   top: 50%
 
 .input-range__track--active
-  background: #3f51b5
+  background: #0098ea
 
 .input-range
   height: 1rem
   position: relative
   width: 100%
+
+.input-range__label--value>.input-range__label-container
+  background: #00a2fb
+  color: white
+  display: inline-block
+  text-align: center
+  min-width: 80px
+  padding: 8px 0
+  border-radius: 4px
+  &:after
+    content: ''
+    height: 8px
+    width: 8px
+    background:  #00a2fb
+    position: absolute
+    bottom: -4px
+    left: 50%
+    transform: translateX(-50%) rotateZ(45deg)
