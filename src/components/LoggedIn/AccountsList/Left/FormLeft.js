@@ -37,9 +37,9 @@ const FormItems = [
 const style= {
     display: "flex",
     flexDirection: "column",
-    marginBottom: 65
+    marginBottom: 65,
+    marginRight: 60
 };
-
 const submitStyle = {
     backgroundColor: "#00a2fb",
     color: "white",
