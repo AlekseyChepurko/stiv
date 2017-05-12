@@ -9,7 +9,8 @@ const style = {
     paddingLeft: 36,
     paddingTop: 55,
     paddingBottom: 55,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    maxHeight: 830
 };
 export default class InfoBlock extends Component {
     render(){
