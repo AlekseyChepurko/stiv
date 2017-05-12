@@ -12,7 +12,8 @@ export default class Accounts extends Component {
     constructor(props){
         super(props);
         this.state = {
-            accounts: this.props.accounts
+            accounts: this.props.accounts,
+            activeAccount: this.props.activeAccount,
         }
     }
 
@@ -26,6 +27,7 @@ export default class Accounts extends Component {
                 React.createElement(Account, {
                     key: iter,
                     account: item,
+                    active: iter===this.state.activeAccount ? true : false,
                     paddingLeft: this.props.paddingLeft
                 })
             );
@@ -38,8 +40,8 @@ export default class Accounts extends Component {
         )
     }
 }
-
 Accounts.defaultProps = {
+    activeAccount: 2,
     accounts: [{
         img: defaultAvatar,
         name: "polykov_alex",
@@ -72,6 +74,10 @@ const themeStyle = {
 class Account extends Component {
     render(){
         Object.assign(accountStyle, {paddingLeft: this.props.paddingLeft});
+        this.props.active ?
+            Object.assign(accountStyle, {backgroundColor: "#1da4f7", color: "white"})
+            :
+            Object.assign(accountStyle, {backgroundColor: "white", color: "black"});
         return(
             <li style={accountStyle}>
                 <img src={this.props.account.img} alt="avatar" style={{marginRight: 10}}/>
