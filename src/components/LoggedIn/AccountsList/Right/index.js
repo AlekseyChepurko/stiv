@@ -3,6 +3,7 @@
  */
 import React, {Component} from 'react'
 import Header from '../Header'
+import Accounts from'./Accounts'
 
 const header = {
     title: '<b>Ваши</b> аккаунты',
@@ -22,7 +23,11 @@ export default class Right extends Component {
         }
         return(
             <section className="right_section" style={style}>
-                <Header header={header} textMaxWidth={135} paddingLeft={this.props.paddingLeft}/>
+                <Header
+                    header={header}
+                    textMaxWidth={135}
+                    paddingLeft={this.props.paddingLeft}/>
+                <Accounts paddingLeft={this.props.paddingLeft}/>
             </section>
         )
     }
