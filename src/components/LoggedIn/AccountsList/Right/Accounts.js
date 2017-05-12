@@ -54,7 +54,47 @@ Accounts.defaultProps = {
         img: defaultAvatar,
         name: "polykov_alex",
         theme: "Спорт"
-    },]
+    },{
+        img: defaultAvatar,
+        name: "polykov_alex",
+        theme: "Спорт"
+    },{
+        img: defaultAvatar,
+        name: "polykov_alex",
+        theme: "Спорт"
+    },{
+        img: defaultAvatar,
+        name: "polykov_alex",
+        theme: "Спорт"
+    },{
+        img: defaultAvatar,
+        name: "polykov_alex",
+        theme: "Спорт"
+    },{
+        img: defaultAvatar,
+        name: "polykov_alex",
+        theme: "Спорт"
+    },{
+        img: defaultAvatar,
+        name: "polykov_alex",
+        theme: "Спорт"
+    },{
+        img: defaultAvatar,
+        name: "polykov_alex",
+        theme: "Спорт"
+    },{
+        img: defaultAvatar,
+        name: "polykov_alex",
+        theme: "Спорт"
+    },{
+        img: defaultAvatar,
+        name: "polykov_alex",
+        theme: "Спорт"
+    },{
+        img: defaultAvatar,
+        name: "polykov_alex",
+        theme: "Спорт"
+    }]
 };
 
 const accountStyle = {
