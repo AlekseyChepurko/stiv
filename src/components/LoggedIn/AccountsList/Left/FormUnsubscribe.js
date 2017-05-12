@@ -19,6 +19,9 @@ const fields = [
     }
 ];
 
+const style = {
+    marginBottom: 40
+};
 export default class FormUnsubscribe extends Component {
     render(){
         const Fields = [];
@@ -31,7 +34,7 @@ export default class FormUnsubscribe extends Component {
            )
         });
         return(
-            <section className="number input no_arrows">
+            <section className="number input no_arrows" style={style}>
                 {Fields}
             </section>
         )
