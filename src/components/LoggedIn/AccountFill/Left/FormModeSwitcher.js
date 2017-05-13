@@ -35,7 +35,11 @@ export default class FormModeSwitcher extends Component {
         )
     }
 }
-
+const buttonStyle = {
+    minHeight: 27,
+    minWidth: 120,
+    transition: "background-color 0.3s"
+};
 class Button extends Component {
     constructor(props){
         super(props);
@@ -47,15 +51,14 @@ class Button extends Component {
         }
     }
     render(){
-        const buttonStyle = {
-            minHeight: 27,
-            minWidth: 120,
+        Object.assign(buttonStyle, {
             backgroundColor: this.props.active ? "#00a2fb" : "white",
             color: this.props.active ? "white" : "#00a2fb",
-        };
+        });
 
         return(
             <button style={buttonStyle} onClick={this.switchFormMode}>{this.props.text}</button>
         )
     }
 }
+
