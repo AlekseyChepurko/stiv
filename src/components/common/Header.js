@@ -18,7 +18,7 @@ class Header extends Component {
     render(){
         const progressStyle = {
             width: this.state.daysUsed/this.props.days.common * 100+"%",
-            transition: "width 0.5s"
+            transition: `${1.5*this.state.daysUsed/this.props.days.common}s`
         };
         return(
             <header className="main" id="main_header">
