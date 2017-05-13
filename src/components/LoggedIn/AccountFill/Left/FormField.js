@@ -2,19 +2,20 @@
  * Created by Алексей on 13.05.2017.
  */
 import React, {Component} from 'react'
+import TimeInput from './TimeInput'
+import '../styles/numbericUnput.css'
+
 const labelStyle = {
     marginRight: 17,
     fontSize: "1rem",
     color: "#54565b",
     marginTop: 13
 };
-
 const fieldStyle = {
     display: "flex",
     flexDirection: "row",
     marginBottom: 12
 };
-
 const inputStyle = {
     backgroundColor: "#ecf1f4",
     color: "#999fa7",
@@ -25,7 +26,6 @@ const inputStyle = {
     boxSizing: "border-box",
     minWidth: 300
 };
-
 
 export default class FormField extends Component {
 
@@ -41,6 +41,27 @@ export default class FormField extends Component {
             Object.assign(labelStyle, {
                 width: this.props.labelWidth,
             });
+
+        let input;
+        switch (this.props.item.type){
+            case "textarea":
+                input = <textarea
+                            style={inputStyle}
+                            name={this.props.item.name}
+                            id={this.props.item.name}
+                            placeholder={this.props.item.placeholder}/>;
+                break;
+            case "time": input = <TimeInput />;
+                break;
+            default: input = <input
+                                style={inputStyle}
+                                name={this.props.item.name}
+                                id={this.props.item.name}
+                                min={0}
+                                placeholder={this.props.item.placeholder}
+                                type={this.props.item.type}/>;
+                    break;
+        }
         return(
             <section style={fieldStyle}>
                 <label
@@ -48,21 +69,7 @@ export default class FormField extends Component {
                     style={labelStyle}>
                     {this.props.item.label}
                 </label>
-                {this.props.item.type === "textarea" ?
-                    <textarea
-                        style={inputStyle}
-                        name={this.props.item.name}
-                        id={this.props.item.name}
-                        placeholder={this.props.item.placeholder}/>
-                    :
-                    <input
-                        style={inputStyle}
-                        name={this.props.item.name}
-                        id={this.props.item.name}
-                        min={0}
-                        placeholder={this.props.item.placeholder}
-                        type={this.props.item.type}/>
-                }
+                {input}
             </section>
         )
     }
@@ -77,3 +84,4 @@ FormField.defaultProps = {
         name: "name"
     }
 };
+
