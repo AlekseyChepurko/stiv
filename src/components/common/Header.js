@@ -6,7 +6,20 @@ import PropTypes from 'prop-types'
 import "../../assets/styles/components/common/Header.css";
 
 class Header extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            daysUsed: 0
+        };
+    }
+    componentDidMount(){
+        this.setState({daysUsed: this.props.days.used});
+    }
     render(){
+        const progressStyle = {
+            width: this.state.daysUsed/this.props.days.common * 100+"%",
+            transition: "width 0.5s"
+        };
         return(
             <header className="main" id="main_header">
                 <section className="progress__wrap">
@@ -16,7 +29,7 @@ class Header extends Component {
                     </div>
 
                     <div className="progress_bar">
-                        <div className="fill" style={{width: this.props.days.used/this.props.days.common * 100+"%" }}> </div>
+                        <div className="fill" style={progressStyle}> </div>
                     </div>
 
                 </section>
@@ -29,12 +42,12 @@ class Header extends Component {
 Header.defaultProps = {
     tariff: "бесплатный",
     days: {used: 10, common: 30}
-}
+};
 Header.propTypes = {
     days: PropTypes.shape({
         used: PropTypes.number,
         common: PropTypes.number
     })
-}
+};
 
 export default Header;
