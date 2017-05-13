@@ -4,7 +4,7 @@
 import React, {Component} from 'react'
 import Common from "../../common/Common";
 
-export default class RivalSubscribe extends Component {
+export default class RivalSubcribe extends Component {
     render(){
         return(
             <Common pageName="rival_subscribe">

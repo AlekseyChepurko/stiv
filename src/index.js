@@ -16,7 +16,7 @@ import AccountSettings from "./components/LoggedIn/AccountSettings";
 import StatisticsContent from "./components/LoggedIn/StatisticsContent";
 import AccountsList from "./components/LoggedIn/AccountsList";
 import AccountFill from "./components/LoggedIn/AccountFill";
-import RivalSubcribe from "./components/LoggedIn/RivalSubscribe"
+import RivalSubscribe from "./components/LoggedIn/RivalSubscribe";
 
 import Registration from "./components/LoggedOut/Registration";
 import ForgotPass from "./components/LoggedOut/ForgotPass";
