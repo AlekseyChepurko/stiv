@@ -3,11 +3,39 @@
  */
 
 import React, {Component} from 'react'
+import FormModeSwitcher from './FormModeSwitcher'
+import FormSimple from './FormSimple'
+import FormAdvanced from './FormAdvanced'
 
+const style = {
+    minWidth: 1060,
+    marginRight: 17,
+    paddingTop: 58,
+    boxSizing: "border-box",
+    paddingLeft: 68,
+    border: "1px solid #dce2e5",
+    backgroundColor: "white",
+};
 export default class Left extends Component {
-    render(){
-        return(
-            <section></section>
+    constructor(props) {
+        super(props);
+        this.state = {
+            formMode: "simple"
+        };
+    }
+    render() {
+        return (
+            <section style={style}>
+                <FormModeSwitcher
+                    parent={this}
+                    formMode={this.state.formMode}/>
+                <form action="#">
+                    {this.state.formMode === "simple" ?
+                        <FormSimple/> :
+                        <FormAdvanced/>
+                    }
+                </form>
+            </section>
         )
     }
 }
