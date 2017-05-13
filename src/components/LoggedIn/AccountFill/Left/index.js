@@ -17,12 +17,18 @@ const style = {
     border: "1px solid #dce2e5",
     backgroundColor: "white",
 };
+
 export default class Left extends Component {
     constructor(props) {
         super(props);
         this.state = {
             formMode: "simple"
         };
+        this.submit = this.submit.bind(this);
+    }
+    submit(e){
+        e.preventDefault();
+        console.log("filling starting");
     }
     render() {
         return (
@@ -31,7 +37,7 @@ export default class Left extends Component {
                     parent={this}
                     formMode={this.state.formMode}/>
                 <Info/>
-                <form action="#">
+                <form action="#" onSubmit={this.submit}>
                     {this.state.formMode === "simple" ?
                         <FormSimple/> :
                         <FormAdvanced/>
