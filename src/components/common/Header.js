@@ -3,6 +3,12 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
+import {
+    BrowserRouter as Router,
+    Link,
+    // TODO redirect settings
+    Redirect
+} from 'react-router-dom';
 import "../../assets/styles/components/common/Header.css";
 
 class Header extends Component {
@@ -11,9 +17,13 @@ class Header extends Component {
         this.state = {
             daysUsed: 0
         };
+        this.logout = this.logout.bind(this);
     }
     componentDidMount(){
         this.setState({daysUsed: this.props.days.used});
+    }
+    logout(){
+
     }
     render(){
         const progressStyle = {
@@ -33,7 +43,9 @@ class Header extends Component {
                     </div>
 
                 </section>
-                <button id="exit">e</button>
+                <button id="exit" onClick={this.logout}>
+                    <Link to="/login">Exit</Link>
+                </button>
             </header>
         )
     }
