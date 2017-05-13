@@ -8,6 +8,15 @@ const style = {
     display: "flex",
     flexDirection: "row"
 };
+const submitStyle = {
+    minWidth: 300,
+    minHeight: 40,
+    display: "block",
+    marginLeft: 132,
+    marginTop: 41,
+    backgroundColor: "#00a2fb",
+    color: "white"
+};
 export default class Form extends Component {
     render(){
         const leftFields = [];
@@ -31,7 +40,10 @@ export default class Form extends Component {
         return(
             <section style={style}>
                 <section style={{marginRight: 32}}>{leftFields}</section>
-                <section>{rightFields}</section>
+                <section>
+                    {rightFields}
+                    <button type="submit" style={submitStyle}>Запустить  наполнение</button>
+                </section>
             </section>
         )
     }
