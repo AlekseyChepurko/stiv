@@ -8,7 +8,6 @@ const style = {
     border: "1px solid #dce2e5",
     paddingLeft: 36,
     paddingTop: 55,
-    paddingBottom: 55,
     backgroundColor: "white",
     maxHeight: 830
 };
