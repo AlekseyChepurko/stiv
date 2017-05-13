@@ -5,7 +5,8 @@ import React, {Component} from 'react'
 
 const style = {
     display: "flex",
-    flexDirection: "row"
+    flexDirection: "row",
+    marginBottom: 19
 };
 const textStyle = {
     fontSize: "1.5rem",
@@ -61,4 +62,3 @@ class Button extends Component {
         )
     }
 }
-
