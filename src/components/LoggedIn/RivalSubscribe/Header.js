@@ -14,7 +14,7 @@ const style = {
 
 export default class Header extends Component {
     render(){
-        Object.assign(style, {paddingLeft: this.props.paddingLeft})
+        Object.assign(style, {paddingLeft: this.props.paddingLeft});
         return(
             <header style={style}>
                 <HeaderTitle title={this.props.header.title}/>
@@ -26,7 +26,7 @@ export default class Header extends Component {
 
 
 const titleStyle = {
-    marginBottom: 10,
+    marginBottom: 7,
     fontSize: 21
 };
 class HeaderTitle extends Component {
@@ -45,7 +45,8 @@ const textStyle = {
     maxWidth: 565,
     display: "flex",
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
+    lineHeight: "1.428rem"
 };
 class HeaderText extends Component {
     render(){
