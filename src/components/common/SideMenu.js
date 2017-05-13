@@ -13,7 +13,7 @@ class SideMenu extends Component {
 
         this.state = {
             dropdownState: false
-        }
+        };
 
         this.updateDropdownState = this.updateDropdownState.bind(this);
     };
@@ -51,7 +51,7 @@ class SideMenu extends Component {
                                 },
 
                                 {title: "Подписка по конкурентам",
-                                 link : "#",
+                                 link : "/rival_subscribe",
                                  id: "opponents_subscribe"
                                 },
 
@@ -107,11 +107,11 @@ MenuDropdownItem.defaultProps = {
     dropdownItems: [{"сабэлементы - items prop в виде объекта {'text link': 'link'}": "#"}],
     commonClass: "common_class",
     id: "idNeeded"
-}
+};
 
 SideMenu.defaultProps = {
     avatarImage: "defaultAvatar.png",
     imagePath: "./assets/img/",
     userName: "александр инсаев",
-}
+};
 export default SideMenu;
