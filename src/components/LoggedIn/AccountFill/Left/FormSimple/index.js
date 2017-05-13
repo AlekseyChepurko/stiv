@@ -56,6 +56,13 @@ const rightFields = [
         labelWidth: 115,
         name: "tagMaximum"
     },
+    {
+        type: "time",
+        placeholder: "",
+        label: "Время постинга:",
+        labelWidth: 115,
+        name: "tagMaximum"
+    },
 ];
 
 export default class FromSimple extends Component {
