@@ -6,6 +6,7 @@ import React, {Component} from 'react'
 import FormModeSwitcher from './FormModeSwitcher'
 import FormSimple from './FormSimple'
 import FormAdvanced from './FormAdvanced'
+import Info from './Info'
 
 const style = {
     minWidth: 1060,
@@ -29,6 +30,7 @@ export default class Left extends Component {
                 <FormModeSwitcher
                     parent={this}
                     formMode={this.state.formMode}/>
+                <Info/>
                 <form action="#">
                     {this.state.formMode === "simple" ?
                         <FormSimple/> :
