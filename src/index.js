@@ -26,7 +26,7 @@ const user = {
     loggedIn: false
 };
 ReactDOM.render(
-    <Router >
+    <Router>
         <div className="router">
             <Route exact path="/" component={Profile} />
             <Route exact path="/profile" component={Profile} />
