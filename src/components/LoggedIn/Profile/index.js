@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react';
-import promoLogoImg from '../../../../public/assets/img/promo_logo.png';
+import promoLogoImg from 'assets/img/promo_logo.png';
 import '../../../assets/styles/index.css';
 import NewsComponent from "../../../components/NewsComponent";
 import Statistics from "../../../components/Statistics";

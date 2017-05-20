@@ -65,4 +65,8 @@ module.exports = {
         hot: true
     },
 
+    resolve: {
+        modules: ["./src/components/common", "node_modules", "./public"]
+    }
+
 };
