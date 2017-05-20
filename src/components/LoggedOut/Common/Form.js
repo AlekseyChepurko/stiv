@@ -12,8 +12,8 @@ export default class LoginForm extends Component {
         this.submitAction = this.submitAction.bind(this);
     }
 
-    submitAction = this.props.submitButton.action;
-
+    // submitAction = this.props.submitButton.action;
+    submitAction(){this.props.submitButton.action()};
     render(){
 
         const inputFields = [];
