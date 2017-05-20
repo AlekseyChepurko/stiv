@@ -6,6 +6,63 @@ import {Link} from 'react-router-dom'
 import "../../assets/styles/components/common/SideMenu.css"
 import logo from "../../assets/img/stiv_logo.png"
 
+const menuItems = [
+    {
+        className: "menu_nav__item",
+        id: "add_account",
+        link: "/add_account",
+        text: "Добавить аккаунт",
+    },
+    {
+        className: "menu_nav__item",
+        id: "account_list",
+        link: "/accounts_list",
+        text: "Список аккаунтов"
+    },
+    {
+        className: "menu_nav__item",
+        id: "fill_accounts",
+        link: "/account_fill",
+        text: "Наполнение аккаунтов"
+    },
+    {
+        className: "menu_nav__item",
+        id: "accounts_promotion",
+        link: "",
+        text: "Раскрутка аккаунтов",
+        dropDown: true,
+        items:[
+            {text : "Статус раскрутки",
+                link: "#",
+                id: "promotion_status"
+            },
+
+            {text: "Подписка по конкурентам",
+                link : "/rival_subscribe",
+                id: "opponents_subscribe"
+            },
+
+            {text:"Подписка по списку",
+                link: "#",
+                id: "list_subscribe"
+            }
+        ]
+    },
+    {
+        className: "menu_nav__item",
+        id: "audience_collection",
+        link: "/audience_collect",
+        text: "Сбор аудитории"
+    },
+    {
+        className: "menu_nav__item",
+        id: "statistic",
+        link: "/statistics",
+        text: "Статистика"
+    }
+
+];
+
 class SideMenu extends Component {
 
     constructor(props){
@@ -23,6 +80,14 @@ class SideMenu extends Component {
     }
 
     render(){
+        const items = menuItems.map( (item, iter)=> React.createElement(MenuItem, {
+                                                                                    id: item.id,
+                                                                                    link: item.link,
+                                                                                    className: item.className,
+                                                                                    text: item.text,
+                                                                                    dropDown: !!item.dropDown,
+                                                                                    items: item.items ? item.items : null,
+                                                                                    key:iter}));
         return(
             <section className="side_menu__wrap">
                 <header>
@@ -39,31 +104,7 @@ class SideMenu extends Component {
                 <nav className="sideMenu__navigation">
                     <header>меню</header>
                     <ul className="menu_nav">
-                        <li className="menu_nav__item"><Link to="/add_account" id="add_account">добавить аккаунт</Link></li>
-                        <li className="menu_nav__item"><Link to="/accounts_list" id="account_list">список аккаунтов</Link></li>
-                        <li className="menu_nav__item"><Link to="/account_fill" id="fill_accounts">наполнение аккаунтов</Link></li>
-
-                        <MenuDropdownItem commonClass="menu_nav__item" id="accounts_promotion" dropdownTitle="раскрутка аккаунтов" dropdownItems={
-                            [
-                                {title : "Статус раскрутки",
-                                 link: "#",
-                                 id: "promotion_status"
-                                },
-
-                                {title: "Подписка по конкурентам",
-                                 link : "/rival_subscribe",
-                                 id: "opponents_subscribe"
-                                },
-
-                                {title:"Подписка по списку",
-                                 link: "#",
-                                 id: "list_subscribe"
-                                }
-                            ]
-                        }/>
-
-                        <li className="menu_nav__item"><Link to="#" id="audience_collection">сбор аудитории</Link></li>
-                        <li className="menu_nav__item"><Link to="/statistics" id="statistic">статистика</Link></li>
+                        {items}
                     </ul>
                 </nav>
 
@@ -73,6 +114,35 @@ class SideMenu extends Component {
     }
 }
 
+class MenuItem extends Component {
+    render(){
+        return(
+            <li className={this.props.className}>
+                {this.props.dropDown ? <MenuDropdownItem
+                    commonClass={this.props.className}
+                    id={this.props.id}
+                    dropdownTitle={this.props.text}
+                    dropdownItems={this.props.items}
+                /> :
+                    <Link
+                        id={this.props.id}
+                        to={this.props.link}>
+                        {this.props.text}
+                    </Link>
+                    }
+            </li>
+        )
+    }
+}
+
+MenuItem.defaultProps = {
+    className: "",
+    id: "",
+    ref: "",
+    text: "",
+    dropDown: false
+
+};
 
 class MenuDropdownItem extends Component{
     constructor(props){
@@ -80,7 +150,7 @@ class MenuDropdownItem extends Component{
 
         this.state = {
           dropdownState: false,
-          dropdownItems: this.props.dropdownItems.map((item, i) => <li key={i}><a href={item.link} id={item.id} key={i}> {item.title} </a></li> ),
+          dropdownItems: this.props.dropdownItems.map((item, i) => <li key={i}><a href={item.link} id={item.id} key={i}> {item.text} </a></li> ),
         };
 
         this.updateDropdownState = this.updateDropdownState.bind(this);
@@ -111,7 +181,7 @@ MenuDropdownItem.defaultProps = {
 
 SideMenu.defaultProps = {
     avatarImage: "defaultAvatar.png",
-    imagePath: "./assets/img/",
+    imagePath: "/public/assets/img/",
     userName: "александр инсаев",
 };
 export default SideMenu;
