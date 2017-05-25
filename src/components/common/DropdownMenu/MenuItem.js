@@ -3,6 +3,7 @@
  */
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
+import PropTypes from 'prop-types'
 import MenuDropDownItem from './MenuDropDownItem'
 import {listStyle} from './index'
 export default class MenuItem extends Component {
@@ -15,26 +16,7 @@ export default class MenuItem extends Component {
         this.mouseOn = this.mouseOn.bind(this);
         this.mouseOut = this.mouseOut.bind(this);
         this.openToggle = this.openToggle.bind(this);
-
-        this.asyncTimeout = (time, callback)=>{
-            console.log(`start`);
-            const res = new Promise((resolve, reject)=>{
-                setTimeout(() => {
-                    resolve("");
-                }, time);
-            });
-            res.then(
-                result => {
-                    `сработало через ${time}ms`;
-                    callback();
-                },
-                error => {
-                    console.log("something in asyncTimout wrong");
-                }
-            )
-        };
     }
-    static asyncTimeout;
 
     mouseOn(){
         this.setState({mouseOn: true});
@@ -92,7 +74,17 @@ MenuItem.defaultProps = {
     id: "",
     ref: "",
     text: "",
-    dropDown: false
+    dropDown: false,
+    items: [{text :"subelements is array of objects {text: text, link}", link: "#"}]
+
+};
+MenuItem.PropTypes = {
+    className: PropTypes.string,
+    id: PropTypes.string,
+    link: PropTypes.string,
+    text: PropTypes.number,
+    dropDown: PropTypes.object,
+    items: PropTypes.arrayOf(PropTypes.object)
 
 };
 

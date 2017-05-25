@@ -31,7 +31,7 @@ export default class MenuDropDownItem extends Component{
 
 MenuDropDownItem.defaultProps = {
     name: "введите название dropdown элемента как name prop",
-    dropdownItems: [{"сабэлементы - items prop в виде объекта {'text link': 'link'}": "#"}],
+    items: [{"сабэлементы - items prop в виде объекта {'text link': 'link'}": "#"}],
     commonClass: "common_class",
     id: "idNeeded"
 };
