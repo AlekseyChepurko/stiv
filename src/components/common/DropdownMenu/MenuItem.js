@@ -6,6 +6,8 @@ import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import MenuDropDownItem from './MenuDropDownItem'
 import {listStyle} from './index'
+import defaultDropdownArrow from './imgs/dropdown-arrow.png'
+
 export default class MenuItem extends Component {
     constructor(props){
         super(props);
@@ -32,11 +34,16 @@ export default class MenuItem extends Component {
     render(){
         const underline = {
             height: 2,
-            backgroundColor: 'white',
+            backgroundColor: '#0777b9',
             transition: "all 0.2s",
             position: "relative",
             width: this.state.mouseOn ? "100%" : 0,
             left: this.state.mouseOn ? 0 : "50%"
+        };
+        const dropDownArrowStyle = {
+            maxHeight: 10,
+            transition: "all 0.3s",
+            transform: `${this.state.opened ? "rotateY(180deg) rotateZ(90deg) translateY(-3px)" : "rotate(0deg) translateY(-3px)"}`
         };
         Object.assign(listStyle.li, {
             maxHeight: this.state.opened ? (300) : (parseInt(listStyle.ul.lineHeight)+underline.height),
@@ -54,7 +61,7 @@ export default class MenuItem extends Component {
                             {this.props.text}
                         </Link>
                         {this.props.dropDown ?
-                            <DropDownSwitcher /> : ""}
+                            <img src={this.props.dropDownArrow} style={dropDownArrowStyle} alt="arrow"/> : ""}
                     </div>
                     <div className="underline" style={underline}></div>
 
@@ -75,6 +82,7 @@ MenuItem.defaultProps = {
     ref: "",
     text: "",
     dropDown: false,
+    dropDownArrow: defaultDropdownArrow,
     items: [{text :"subelements is array of objects {text: text, link}", link: "#"}]
 
 };
@@ -87,12 +95,3 @@ MenuItem.PropTypes = {
     items: PropTypes.arrayOf(PropTypes.object)
 
 };
-
-class DropDownSwitcher extends Component {
-
-    render(){
-        return(
-            <div >asd</div>
-        )
-    }
-}

@@ -19,7 +19,7 @@ export default class MenuDropDownItem extends Component{
             text: item.text,
             dropDown: !!item.dropDown,
             items: item.items ? item.items : null,
-            key:iter}));
+            key: iter}));
         return(
                 <ul style={{
                     paddingLeft: 10}}>
