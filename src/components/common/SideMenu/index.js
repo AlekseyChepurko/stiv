@@ -3,7 +3,7 @@
  */
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import MenuItem from './MenuItem'
+import DropDownMenu from 'DropdownMenu'
 import logo from "../../../assets/img/stiv_logo.png"
 
 const menuItems = [
@@ -89,60 +89,18 @@ const style = {
     backgroundColor: "#172437",
     color: "white"
 };
-export let listStyle = {
-    ul: {
-        fontSize: "1.15rem",
-        marginTop: 18,
-        lineHeight: "35px",
-    },
-    li: {
-        marginBottom: 10,
-        overflow: "hidden",
-        transition: "all 0.3s"
-    },
-    wrap: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between"
-    }
-};
 export default class SideMenu extends Component {
 
-    constructor(props){
-        super(props);
-
-        this.state = {
-            dropdownState: false
-        };
-
-        this.updateDropdownState = this.updateDropdownState.bind(this);
-    };
-
-    updateDropdownState(e){
-        this.setState({dropdownState: !this.state.dropdownState});
-    }
-
     render(){
-        const items = menuItems.map(
-            (item, iter) =>
-                React.createElement(MenuItem, {
-                                               id: item.id,
-                                               link: item.link,
-                                               className: item.className,
-                                               text: item.text,
-                                               dropDown: !!item.dropDown,
-                                               items: item.items ? item.items : null,
-                                               key:iter}));
+
         return(
             <section className="side_menu__wrap" style={style}>
                 <SideHeader />
 
-                <nav className="sideMenu__navigation">
-                    <header>меню</header>
-                    <ul className="menu_nav" style={listStyle.ul}>
-                        {items}
-                    </ul>
-                </nav>
+                <DropDownMenu
+                    menuItems={menuItems}
+                    headText="Меню"
+                />
 
             </section>
 
