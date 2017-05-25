@@ -13,14 +13,23 @@ const commonStyle = {
     margin: 40,
     marginBottom: 0
 };
+const style = {
+    display: "flex",
+    flexDirection: "row",
+    maxHeight: "100vh"
+};
+
+const contentStyle = {
+    overflow: "auto",
+};
 
 export default class Common extends Component {
     render() {
         return(
-            <section className={ `logged_in ${this.props.pageName ? this.props.pageName : ''}` } >
+            <section className={ `logged_in ${this.props.pageName ? this.props.pageName : ''}` } style={style} >
                 <SideMenu />
 
-                <section className="content">
+                <section className="content" style={contentStyle}>
                     <Header/>
 
                     <main style={ this.props.styles ? this.props.styles : commonStyle}>
