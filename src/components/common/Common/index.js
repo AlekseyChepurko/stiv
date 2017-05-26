@@ -4,10 +4,10 @@
 
 import React, {Component} from 'react';
 import Header from 'Header';
-import SideMenu from './SideMenu';
+import SideMenu from 'SideMenu';
 
-import '../../assets/styles/normolize.css'
-import '../../assets/styles/components/common/defaults.css'
+// import '../../assets/styles/normolize.css'
+import '../../../assets/styles/components/common/defaults.css'
 
 const commonStyle = {
     margin: 40,
@@ -32,7 +32,7 @@ export default class Common extends Component {
                 <section className="content" style={contentStyle}>
                     <Header/>
 
-                    <main style={ this.props.styles ? this.props.styles : commonStyle}>
+                    <main style={commonStyle}>
                         { this.props.children }
                     </main>
                 </section>
