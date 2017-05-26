@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import DropDownMenu from 'DropdownMenu'
 import logo from "../../../assets/img/stiv_logo.png"
+import defaultAvatar from "./img/defaultAvatar.png"
 
 const menuItems = [
     {
@@ -140,7 +141,7 @@ class SideHeader extends Component {
                     <img src={logo} className="logo_img" alt="logo"/>
                 </Link>
                 <div className="avatar_wrap" style={headStyle.ava_wrap}>
-                    <img style={headStyle.img} src={this.props.imagePath + this.props.avatarImage} alt="avatar" className="avatar_img"/>
+                    <img style={headStyle.img} src={defaultAvatar} alt="avatar" className="avatar_img"/>
                 </div>
                 <p>Добро пожаловать,</p>
                 <Link to="/account_settings" className="user_name" style={headStyle.user} >{this.props.userName}</Link>
@@ -150,7 +151,7 @@ class SideHeader extends Component {
 }
 
 
-SideMenu.defaultProps = {
+SideHeader.defaultProps = {
     avatarImage: "defaultAvatar.png",
     imagePath: "/public/assets/img/",
     userName: "александр инсаев",
