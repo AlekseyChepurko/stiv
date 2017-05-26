@@ -13,6 +13,7 @@ const header = {
 
 const style = {
     flex: 1,
+    minWidth: 280,
     border: "1px solid #dce2e5"
 };
 
