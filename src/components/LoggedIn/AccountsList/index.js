@@ -14,10 +14,10 @@ const style = {
 export default class AccountsList extends Component {
     render(){
         return(
-            <Common pageName="accounts_list">
+            <section style={{display: "flex", flexDirection: "row"}} >
                 <Left style={style} paddingLeft={73}/>
                 <Right style={style} paddingLeft={52}/>
-            </Common>
+            </section>
         )
     }
 }
