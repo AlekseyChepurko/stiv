@@ -4,13 +4,13 @@
 import React, { Component } from 'react';
 import "../assets/styles/normolize.css"
 import '../assets/styles/components/NewsItem.css';
-
-class NewsItem extends Component{
+import defaultImg from 'imgs/actor.png'
+export default class NewsItem extends Component{
     constructor(props){
         super(props);
 
         this.state = {
-            img: this.props.imgDir + this.props.imgName,
+            img: this.props.img,
         };
     }
 
@@ -32,11 +32,8 @@ class NewsItem extends Component{
 
 NewsItem.defaultProps = {
                         title: "Улучшенная навигация",
-                        imgDir: "./assets/img/",
-                        imgName: "defaultNewsImg.png",
+                        img: defaultImg,
                         creationDate: "24.03.2014",
                         link: "#",
                         text: "Если при получении новых карт, в колоде уже есть подобные, их можно объединять, создавая удивительные эффекты на выбор. Например, один и тот же герой в последстсм ожет стать танком защиты"
-}
-
-export default NewsItem;
+};

@@ -40,7 +40,7 @@ class NewsTabs extends Component{
             if(tabs[index] === undefined)
                 tabs[index] = [];
             tabs[index].push(item);
-        })
+        });
 
         tabs.forEach( (item, iter) => {
                 tabsRender.push(
