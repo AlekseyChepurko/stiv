@@ -34,7 +34,7 @@ export default class Header extends Component {
             <header id="main_header" style={headerStyle.main}>
                 <section style={headerStyle.progress.wrap} >
                     <div style={headerStyle.progress.main}>
-                        <div>Тариф: <strong>{this.props.tariff}</strong></div>
+                        <div style={{textTransform: "uppercase"}}>Тариф: <strong>{this.props.tariff}</strong></div>
                         <div><strong>{this.props.days.used}</strong> из <strong>{this.props.days.common}</strong> { this.props.days.common%10 === 1 ? "дня" : "дней" }</div>
                     </div>
 
