@@ -9,6 +9,7 @@ import {
     Redirect
 } from 'react-router-dom';
 
+import Common from 'Common';
 
 import Profile from "./components/LoggedIn/Profile";
 import AddAccount from "./components/LoggedIn/AddAccount";
@@ -28,20 +29,19 @@ const user = {
 ReactDOM.render(
     <Router>
         <div className="router">
-            <Route exact path="/" component={Profile} />
-            <Route exact path="/profile" component={Profile} />
-            <Route exact path="/account_settings" component={AccountSettings} />
-            <Route exact path="/statistics" component={StatisticsContent} />
-            <Route exact path="/add_account" component={AddAccount} />
-            <Route exact path="/accounts_list" component={AccountsList} />
-            <Route exact path="/account_fill" component={AccountFill} />
-            <Route exact path="/rival_subscribe" component={RivalSubscribe} />
-
+            <Common>
+                <Route exact path="/" component={Profile} />
+                <Route exact path="/profile" component={Profile} />
+                <Route exact path="/account_settings" component={AccountSettings} />
+                <Route exact path="/statistics" component={StatisticsContent} />
+                <Route exact path="/add_account" component={AddAccount} />
+                <Route exact path="/accounts_list" component={AccountsList} />
+                <Route exact path="/account_fill" component={AccountFill} />
+                <Route exact path="/rival_subscribe" component={RivalSubscribe} />
+            </Common>
 
             <Route exact path="/login" component={Login} />
-
             <Route exact path="/registration" component={Registration} />
-
             <Route exact path="/forgot_pass" component={ForgotPass} />
         </div>
     </Router>,
