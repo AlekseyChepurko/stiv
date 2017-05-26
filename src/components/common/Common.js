@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react';
-import Header from './Header';
+import Header from 'Header';
 import SideMenu from './SideMenu';
 
 import '../../assets/styles/normolize.css'
@@ -40,5 +40,4 @@ export default class Common extends Component {
             </section>
         )
     }
-
 }
