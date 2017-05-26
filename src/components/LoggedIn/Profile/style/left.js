@@ -3,14 +3,14 @@
  */
 
 import {mainColors, transitionTime} from 'Common/style/variables'
-import forumImg from '../../imgs/forumBackground.png'
+import forumImg from '../imgs/forumBackground.png'
 
 export const promo = {
         display: "flex",
         flexDirection: "row",
         maxHeight: 208,
         backgroundColor: "white",
-        marginBottom: 14,
+        marginBottom: 16,
         padding: 48,
         paddingTop: 54,
         paddingLeft: 63,

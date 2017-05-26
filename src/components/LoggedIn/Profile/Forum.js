@@ -2,7 +2,7 @@
  * Created by Алексей on 26.05.2017.
  */
 import React, {Component} from 'react'
-import {forum} from './style/left/main'
+import {forum} from './style/left'
 
 
 export default class  Forum extends Component {
