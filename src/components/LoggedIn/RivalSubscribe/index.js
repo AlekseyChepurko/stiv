@@ -5,7 +5,7 @@ import React, {Component} from 'react'
 import Common from "../../common/Common"
 import Left from "./Left"
 import Right from "./Right"
-import Header from "Header"
+import Header from "./Header"
 
 export default class RivalSubcribe extends Component {
     render(){
