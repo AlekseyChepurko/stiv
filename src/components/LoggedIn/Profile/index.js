@@ -10,7 +10,8 @@ import Statistics from "../../../components/Statistics";
 import Forum from './Forum'
 import {commonStyle} from 'Common/style/main'
 import {profileStyle} from './style/main'
-import {promo} from './style/left/main'
+import {promo} from './style/left'
+import {right, video, playBtn} from './style/right'
 
 import info from 'Common/imgs/infoGray.png'
 
@@ -18,7 +19,7 @@ export default class Profile extends Component {
 
     render(){
         return(
-            <section pageName="profile" style={commonStyle.content}>
+            <section style={commonStyle.content}>
                 <Left />
                 <Right/>
             </section>
@@ -57,10 +58,10 @@ class Left extends Component {
 class Right extends Component {
     render(){
         return(
-            <section className="right_wrapper">
-                <section className="video">
+            <section className="right_wrapper" style={right}>
+                <section className="video" style={video}>
                     {/* some content such video should be here */}
-                    <button className="play"></button>
+                    <button className="play" style={playBtn}></button>
                 </section>
 
                 <NewsComponent />
