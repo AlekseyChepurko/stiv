@@ -83,6 +83,7 @@ const menuItems = [
 
 ];
 const style = {
+    overflow: "auto",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -114,7 +115,8 @@ const headStyle = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        marginTop: 34
+        marginTop: 34,
+        minHeight: 216
     },
     ava_wrap: {
         marginTop: 43,
