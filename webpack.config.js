@@ -18,7 +18,6 @@ const cssProd = ExtractTextPlugin.extract({
 const cssConfig = isProd  ? cssProd : cssDev;
 
 console.log(isProd ? "production build" : "development build");
-console.log(process.argv);
 module.exports = {
     entry: './src/index.js',
     output: {
