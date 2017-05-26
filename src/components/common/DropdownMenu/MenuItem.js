@@ -34,7 +34,7 @@ export default class MenuItem extends Component {
     render(){
         const underline = {
             height: 2,
-            backgroundColor: '#0777b9',
+            backgroundColor: 'rgba(7,119,185, 0.7)',
             transition: "all 0.2s",
             position: "relative",
             width: this.state.mouseOn ? "100%" : 0,
@@ -43,10 +43,10 @@ export default class MenuItem extends Component {
         const dropDownArrowStyle = {
             maxHeight: 10,
             transition: "all 0.3s",
-            transform: `${this.state.opened ? "rotateY(180deg) rotateZ(90deg) translateY(-3px)" : "rotate(0deg) translateY(-3px)"}`
+            transform: `${this.state.opened ? " rotateZ(90deg)  translateY(3px) translateX(5px)" : "rotate(0deg) translateY(3px) translateX(0)"}`
         };
         Object.assign(listStyle.li, {
-            maxHeight: this.state.opened ? (300) : (parseInt(listStyle.ul.lineHeight)+underline.height),
+            maxHeight: this.state.opened ? this.props.openedMaxHeight : (parseInt(listStyle.ul.lineHeight)+underline.height),
             overflowY: this.state.opened ? "overflow" : "hidden",
         });
         return <li style={listStyle.li}
@@ -83,6 +83,7 @@ MenuItem.defaultProps = {
     text: "",
     dropDown: false,
     dropDownArrow: defaultDropdownArrow,
+    openedMaxHeight: 300,
     items: [{text :"subelements is array of objects {text: text, link}", link: "#"}]
 
 };
@@ -90,7 +91,8 @@ MenuItem.PropTypes = {
     className: PropTypes.string,
     id: PropTypes.string,
     link: PropTypes.string,
-    text: PropTypes.number,
+    text: PropTypes.string,
+    openedMaxHeight: PropTypes.number,
     dropDown: PropTypes.object,
     items: PropTypes.arrayOf(PropTypes.object)
 

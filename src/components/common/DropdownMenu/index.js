@@ -6,7 +6,6 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import MenuItem from './MenuItem'
 
-
 export const listStyle = {
     ul: {
         fontSize: "1.15rem",
@@ -25,7 +24,6 @@ export const listStyle = {
         alignItems: "center"
     }
 };
-
 
 export default class DropDownMenu extends Component {
     render(){
