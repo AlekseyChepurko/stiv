@@ -5,7 +5,7 @@
 import React, {Component} from 'react'
 import Price from './Price'
 import PayPeriodSelect from './PayPeriodSelect'
-import './styles/main.css'
+import './styles/main.sass'
 
 
 export default class PaymentForm extends Component {

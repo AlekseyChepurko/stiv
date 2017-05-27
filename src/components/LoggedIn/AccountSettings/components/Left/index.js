@@ -4,7 +4,7 @@
 
 import React, {Component} from 'react'
 import Header from '../Common'
-import './assets/styles/main.css'
+import './assets/styles/main.sass'
 import AvatarImage from './assets/imgs/avatar_default.png'
 
 export default class Left extends Component {

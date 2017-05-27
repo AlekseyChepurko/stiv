@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react'
-import './assets/styles/main.css'
+import './assets/styles/main.sass'
 
 export default class Header extends Component {
 

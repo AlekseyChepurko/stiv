@@ -6,7 +6,7 @@ import React, {Component} from 'react'
 import Header from '../Common'
 import Rang from './components/Rang'
 import PaymentForm from './components/PaymentForm'
-import './assets/styles/main.css'
+import './assets/styles/main.sass'
 
 export default class Right extends Component {
     render(){

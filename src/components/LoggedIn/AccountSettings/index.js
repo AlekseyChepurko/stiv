@@ -10,7 +10,7 @@ import Right from './components/Right'
 const styles = {
     display: 'flex',
     flexDirection: 'row'
-}
+};
 
 const headerStyles = {
     minHeight: 110,
@@ -23,7 +23,7 @@ const headerStyles = {
 };
 
 const leftHeader = {
-    title: <header><b>Настройка</b> аккаунта</header>,
+    title: <header><storng>Настройка</storng> аккаунта</header>,
     text: "В сентябре прошлого года южнокорейская компания можно скорее обменять аппараты, поскольку ",
     styles: headerStyles
 };
@@ -38,10 +38,10 @@ export default class AcoountSettings extends Component {
     render(){
 
         return(
-            <Common pageName="account_settings" style={styles}>
+            <section className="account_settings" style={styles}>
                 <Left header={leftHeader} />
                 <Right header={rightHeader}/>
-            </Common>
+            </section>
         )
     }
 }

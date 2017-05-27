@@ -2,7 +2,7 @@
  * Created by Алексей on 08.05.2017.
  */
 import React, {Component} from 'react'
-import './styles/main.css'
+import './styles/main.sass'
 
 export default class Rang extends Component {
     constructor(props){
