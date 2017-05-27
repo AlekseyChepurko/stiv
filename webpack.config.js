@@ -7,7 +7,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require('webpack');
 
 const buildPath = "build";
-//TODO NODE_ENV check to propd
+
 const isProd = process.env.npm_lifecycle_event === 'prod';
 const cssDev = ['style-loader','css-loader','sass-loader'];
 const cssProd = ExtractTextPlugin.extract({
@@ -27,9 +27,9 @@ module.exports = {
 
     module: {
         rules: [
-            {test: /\.sass$/,use: cssConfig},
+            {test: /\.s[ac]ss$/,use: cssConfig},
             {test: /\.css$/,use: cssConfig},
-            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
+            {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
             //TODO static dir check in regexp
             //TODO prod build with build dir
             {test: /\.(jpe?g|png|gif|svg)$/,
