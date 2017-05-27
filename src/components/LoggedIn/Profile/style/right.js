@@ -13,6 +13,7 @@ export const right = {
 export const video = {
     position: "relative",
     minHeight: 364,
+    marginBottom: 14,
     transition: `all ${transitionTime}`,
     background: `url(${defaultImg}) center no-repeat`,
     backgroundSize: "100%",
