@@ -3,19 +3,17 @@
  */
 
 import React, {Component} from 'react'
-import Common from "../../common/Common"
 import Statistics from '../../Statistics'
 import PeriodSelect from './PeriodSelect'
 import Info from './Info'
 import AccountTable from './AccountTable'
 
 
-
-import './styles/main.css'
+import './styles/main.sass'
 
 export default class StatisticsContent extends Component {
     constructor (props){
-        super(props)
+        super(props);
         this.state = {
             tableLines: [{},{},{},{},{},{},{},{},{},{}]
         }
@@ -24,7 +22,7 @@ export default class StatisticsContent extends Component {
 
     render(){
         return(
-            <Common pageName="statistics">
+            <section className="statistics">
                 <section className="content">
 
                     <Info />
@@ -37,7 +35,7 @@ export default class StatisticsContent extends Component {
                     <AccountTable lines={this.state.tableLines}/>
 
                 </section>
-            </Common>
+            </section>
         )
     }
 }

@@ -5,7 +5,7 @@
 import React, {Component} from 'react'
 import Datetime from 'react-datetime'
 
-import './styles/datetime.css'
+import './styles/datetime.scss'
 
 
 export default class PeriodSelect extends Component {
