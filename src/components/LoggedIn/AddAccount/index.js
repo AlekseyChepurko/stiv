@@ -2,26 +2,23 @@
  * Created by chep on 10.05.17.
  */
 import React, {Component} from 'react'
-import Common from '../../common/Common'
 
 import SingleAccountAddition from './SingleAccountAddition'
 import MultipleAccountsAddition from './MultipleAccountsAddition'
-
-import './styles/main.css'
+//
+// import './styles/main.sass'
 
 const styles = {
-    margin: 40,
+    // margin: 40,
     marginBottom: 0,
     flexDirection: "column"
-}
+};
 
 export default class AddAccount extends Component {
     render(){
-        return(
-            <Common pageName="add_account" styles={styles}>
-                <SingleAccountAddition />
-                <MultipleAccountsAddition />
-            </Common>
-        )
+        return <section className="add_account" style={styles}>
+                    <SingleAccountAddition />
+                    <MultipleAccountsAddition />
+                </section>
     }
 }

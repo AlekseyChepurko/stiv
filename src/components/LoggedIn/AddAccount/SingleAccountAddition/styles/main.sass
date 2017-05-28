@@ -1,19 +1,21 @@
-section.logged_in.add_account>.content>main>.single_account_form
-  min-height: 440px
+section.logged_in>.content>main>.add_account
   width: 100%
-  position: relative
-  background: url("../../imgs/background.png") no-repeat center
-  z-index: 0
-  display: flex
-  flex-direction: column
-  align-items: center
-  &:before
-    content: ' '
-    position: absolute
-    height: 100%
+  >.single_account_form
+    min-height: 440px
     width: 100%
-    background: rgba(0,0,0, 0.7)
-    z-index: -1
+    position: relative
+    background: url("../../imgs/background.png") no-repeat center
+    z-index: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    &:before
+      content: ' '
+      position: absolute
+      height: 100%
+      width: 100%
+      background: rgba(0,0,0, 0.7)
+      z-index: -1
 
-  @import "./inputForm.sass"
-  @import "./formModeSwitcher.sass"
+    @import "./inputForm.sass"
+    @import "./formModeSwitcher.sass"

@@ -9,7 +9,7 @@ import Info from './Info'
 import Title from '../Title'
 
 
-import './styles/main.css'
+import './styles/main.sass'
 
 const advancedStyle = {
     backgroundSize: "cover",
