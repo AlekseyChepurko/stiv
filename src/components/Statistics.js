@@ -15,7 +15,7 @@ class CustomizedDot extends Component{
             </svg>
         );
     }
-};
+}
 
 class Statistics extends Component {
 
