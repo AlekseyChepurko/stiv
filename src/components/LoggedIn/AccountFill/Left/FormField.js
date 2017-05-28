@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react'
 import TimeInput from './TimeInput'
-import '../styles/numbericUnput.css'
+import '../styles/numbericUnput.sass'
 
 const labelStyle = {
     marginRight: 17,
@@ -21,7 +21,7 @@ const inputStyle = {
     color: "#999fa7",
     padding: 14,
     border: "1px solid #dce2e5",
-    borderRadiu: 2,
+    borderRadius: 2,
     resize: "none",
     boxSizing: "border-box",
     minWidth: 300
