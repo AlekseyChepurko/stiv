@@ -9,6 +9,8 @@ import {
     Redirect
 } from 'react-router-dom';
 
+import {routes} from './routes'
+
 import Common from 'Common';
 
 import Profile from "./components/LoggedIn/Profile";
@@ -30,19 +32,19 @@ ReactDOM.render(
     <Router>
         <div className="router">
             <Common>
-                <Route exact path="/" component={Profile} />
-                <Route exact path="/profile" component={Profile} />
-                <Route exact path="/account_settings" component={AccountSettings} />
-                <Route exact path="/statistics" component={StatisticsContent} />
-                <Route exact path="/add_account" component={AddAccount} />
-                <Route exact path="/accounts_list" component={AccountsList} />
-                <Route exact path="/account_fill" component={AccountFill} />
-                <Route exact path="/rival_subscribe" component={RivalSubscribe} />
+                <Route exact path={routes.root} component={Profile} />
+                <Route exact path={routes.loggedIn.profile} component={Profile} />
+                <Route exact path={routes.loggedIn.settings} component={AccountSettings} />
+                <Route exact path={routes.loggedIn.statistics} component={StatisticsContent} />
+                <Route exact path={routes.loggedIn.addAccount} component={AddAccount} />
+                <Route exact path={routes.loggedIn.accountsList} component={AccountsList} />
+                <Route exact path={routes.loggedIn.accountFill} component={AccountFill} />
+                <Route exact path={routes.loggedIn.rivalSubscribe} component={RivalSubscribe} />
             </Common>
 
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/registration" component={Registration} />
-            <Route exact path="/forgot_pass" component={ForgotPass} />
+            <Route exact path={routes.loggedOut.login} component={Login} />
+            <Route exact path={routes.loggedOut.register} component={Registration} />
+            <Route exact path={routes.loggedOut.passForgot} component={ForgotPass} />
         </div>
     </Router>,
   document.getElementById('root')
