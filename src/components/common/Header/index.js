@@ -39,7 +39,7 @@ export default class Header extends Component {
                     </div>
 
                     <div style={headerStyle.progressBar}>
-                        <div style={Object.assign(headerStyle.fill ,progressStyle)}> </div>
+                        <div style={Object.assign({},headerStyle.fill ,progressStyle)}> </div>
                     </div>
 
                 </section>
