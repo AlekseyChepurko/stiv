@@ -3,7 +3,6 @@
  */
 
 import React, {Component} from 'react'
-import Common from '../../common/Common'
 import Left from './components/Left'
 import Right from './components/Right'
 
