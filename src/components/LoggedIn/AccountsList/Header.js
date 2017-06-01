@@ -1,60 +1,24 @@
 /**
- * Created by Алексей on 11.05.2017.
+ * Created by Алексей on 01.06.2017.
  */
 
 import React, {Component} from 'react'
-import InfoImg from './imgs/info.png'
+import {mainColors} from 'Common/style/variables'
+import infoImg from 'Common/imgs/infogray.png'
 
-const style = {
-    backgroundColor: "#00a2fb",
-    color: "white",
-    minHeight: 110,
-    paddingTop: 23,
-    boxSizing: "border-box"
+const styleInfo = {
+    color: mainColors.infoText,
+    lineHeight: "1.25rem",
+    maxWidth: 530
 };
-
 export default class Header extends Component {
     render(){
-        Object.assign(style, {paddingLeft: this.props.paddingLeft})
-        return(
-            <header style={style}>
-                <HeaderTitle title={this.props.header.title}/>
-                <HeaderText text={this.props.header.text} maxWidth={this.props.textMaxWidth}/>
-            </header>
-        )
-    }
-}
-
-
-const titleStyle = {
-    marginBottom: 10,
-    fontSize: 21
-};
-class HeaderTitle extends Component {
-    render(){
-        return(
-            <section
-                className="header_title"
-                dangerouslySetInnerHTML={{__html: this.props.title}}
-                style={titleStyle}
-            >
-            </section>
-        )
-    }
-}
-const textStyle = {
-    maxWidth: 565,
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center"
-};
-class HeaderText extends Component {
-    render(){
-        return(
-            <section className="header_text" style={textStyle}>
-                <img src={InfoImg} alt="info" style={{marginRight: 14}}/>
-                <p style={ {maxWidth: this.props.maxWidth} }>{this.props.text}</p>
-            </section>
-        )
+        return <section>
+                    <section style={{fontSize: "1.3125rem", marginBottom: 18}}><strong>Список</strong> ваших аккаунтов</section>
+                    <section style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+                        <img src={infoImg} alt="info" style={{maxHeight: 18, marginRight: 14}}/>
+                        <section style={styleInfo}>В сентябре прошлого года южнокорейская компания обратилась к владельцам Galaxy можно скорее обменять аппараты, поскольку существует угроза их перегрева и воз</section>
+                    </section>
+                </section>
     }
 }
