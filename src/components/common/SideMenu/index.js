@@ -4,6 +4,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import DropDownMenu from 'DropdownMenu'
+import {routes} from '../routes'
 import logo from "../../../assets/img/stiv_logo.png"
 import defaultAvatar from "./img/defaultAvatar.png"
 
@@ -11,25 +12,25 @@ const menuItems = [
     {
         className: "menu_nav__item",
         id: "add_account",
-        link: "/add_account",
-        text: "Добавить аккаунт",
+        link: routes.loggedIn.addAccount.path,
+        text: routes.loggedIn.addAccount.text,
     },
     {
         className: "menu_nav__item",
         id: "account_list",
-        link: "/accounts_list",
-        text: "Список аккаунтов"
+        link: routes.loggedIn.accountsList.path,
+        text: routes.loggedIn.accountsList.text,
     },
     {
         className: "menu_nav__item",
         id: "fill_accounts",
-        link: "/account_fill",
-        text: "Наполнение аккаунтов"
+        link: routes.loggedIn.accountFill.path,
+        text: routes.loggedIn.accountFill.text,
     },
     {
         className: "menu_nav__item",
         id: "accounts_promotion",
-        link: "/add_account",
+        link: "#",
         text: "Раскрутка аккаунтов",
         dropDown: true,
         items:[
@@ -57,13 +58,15 @@ const menuItems = [
                 ]
             },
 
-            {text: "Подписка по конкурентам",
-                link : "/rival_subscribe",
+            {
+                link: routes.loggedIn.rivalSubscribe.path,
+                text: routes.loggedIn.rivalSubscribe.text,
                 id: "opponents_subscribe"
             },
 
-            {text:"Подписка по списку",
-                link: "#",
+            {
+                link: routes.loggedIn.listSubscribe.path,
+                text: routes.loggedIn.listSubscribe.text,
                 id: "list_subscribe"
             }
         ]
@@ -71,14 +74,14 @@ const menuItems = [
     {
         className: "menu_nav__item",
         id: "audience_collection",
-        link: "/audience_collect",
-        text: "Сбор аудитории"
+        link: routes.loggedIn.audienceCollection.path,
+        text: routes.loggedIn.audienceCollection.text,
     },
     {
         className: "menu_nav__item",
         id: "statistic",
-        link: "/statistics",
-        text: "Статистика"
+        link: routes.loggedIn.statistics.path,
+        text: routes.loggedIn.statistics.text,
     }
 
 ];
