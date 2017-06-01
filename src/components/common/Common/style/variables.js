@@ -19,7 +19,8 @@ export const headerHeight = 75;
 export const mainColors = {
     background: '#ecf1f4',
     blue: '#00a2fb',
-    sectionBorder: '#dce2e5 '
+    sectionBorder: '#dce2e5',
+    infoText: '#7f8897'
 };
 
 export const sideMenuWidth = 300;
