@@ -18,11 +18,9 @@ const style = {
 };
 export default class Left extends Component {
     render(){
-        for(const item in this.props.style){
-            Object.assign(style, { [item]: this.props.style[item] })
-        }
+        const commonStyles = Object.assign({}, style, this.props.style);
         return(
-            <section className="left_section" style={style}>
+            <section className="left_section" style={commonStyles}>
                 <Header
                     header={header}
                     textMaxWidth={530}
