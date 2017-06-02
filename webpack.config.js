@@ -61,7 +61,10 @@ module.exports = {
         compress: true,
         stats: "errors-only",
         open: true,
-        hot: true
+        hot: true,
+        historyApiFallback: {
+            index: 'index.html'
+        }
     },
 
     resolve: {
