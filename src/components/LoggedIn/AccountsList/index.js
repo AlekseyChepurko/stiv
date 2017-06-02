@@ -1,23 +1,30 @@
 /**
- * Created by Алексей on 11.05.2017.
+ * Created by Алексей on 01.06.2017.
  */
 
 import React, {Component} from 'react'
-import Common from "../../common/Common"
-import Right from './Right'
+import {mainColors} from 'Common/style/variables'
+import Header from './Header'
 import Left from './Left'
+import Chart from './Chart'
+const style ={
+    background: "white",
+    width: "100%",
+    border: `1px solid ${mainColors.sectionBorder}`,
+    padding: 74,
+    paddingTop: 61,
+    paddingBottom: 61
 
-const style = {
-    backgroundColor: "white"
 };
 
-export default class AccountsList extends Component {
+export default class AccountsList extends  Component{
     render(){
-        return(
-            <section style={{display: "flex", flexDirection: "row"}} >
-                <Left style={style} paddingLeft={73}/>
-                <Right style={style} paddingLeft={52}/>
+        return <section style={style}>
+            <Header />
+            <section>
+                <Left />
+                <Chart />
             </section>
-        )
+        </section>
     }
 }
